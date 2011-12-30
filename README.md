@@ -12,11 +12,16 @@ You can detect several devices. All detections returns a boolean, You can detect
 + Samsung		: $.mob.samsung();
 + Blackberry	: $.mob.blackberry();
 + HTC			: $.mob.htc();
++ Acer			: $.mob.acer();
++ SonyEricsson	: $.mob.sonyericsson();
++ Motorola		: $.mob.motorola();
++ LG			: $.mob.LG();
 
 
 ### Detect your OS and browser
 You can detect several devices. All detections returns a boolean, You can detect for the following devices:
 
++ iOs (all)			: $.mob.ios();
 + iOs 3				: $.mob.ios3();
 + iOs 4				: $.mob.ios4();
 + iOs 5				: $.mob.ios5();

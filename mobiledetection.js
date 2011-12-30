@@ -31,14 +31,17 @@ jQuery.extend( {
 			apple : function() {
 				return $.mob.userAgent.indexOf('apple') != -1;
 			},
+			ios : function() {
+				return ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
+			},
 			ios3 : function() {
-				return $.mob.userAgent.indexOf('iphone os 3') != -1;
+				return ($.mob.userAgent.indexOf('iphone os 3') != -1) && ($.mob.ios());
 			},
 			ios4 : function() {
-				return $.mob.userAgent.indexOf('iphone os 4') != -1;
+				return ($.mob.userAgent.indexOf('iphone os 4') != -1) && ($.mob.ios());
 			},
 			ios5 : function() {
-				return $.mob.userAgent.indexOf('iphone os 5') != -1;
+				return ($.mob.userAgent.indexOf('iphone os 5') != -1) && ($.mob.ios());
 			},
 			iphone : function() {
 				return $.mob.userAgent.indexOf('iphone') != -1;
@@ -63,6 +66,18 @@ jQuery.extend( {
 			},
 			htc : function() {
 				return $.mob.userAgent.indexOf('htc') != -1;
+			},
+			sonyericsson : function() {
+				return $.mob.userAgent.indexOf('sonyericsson') != -1;
+			},
+			acer : function() {
+				return $.mob.userAgent.indexOf('acer') != -1;
+			},
+			LG : function() {
+				return $.mob.userAgent.indexOf('lg-') != -1;
+			},
+			motorola : function() {
+				return $.mob.userAgent.indexOf('motorola') != -1;
 			},
 			nokia : function() {
 				return $.mob.userAgent.indexOf('nokia') != -1;
@@ -93,19 +108,31 @@ jQuery.extend( {
 				if($.mob.samsung()) {
 					html.addClass('samsung');
 				}
+				if($.mob.sonyericsson()) {
+					html.addClass('sonyericsson');
+				}
+				if($.mob.acer()) {
+					html.addClass('acer');
+				}
+				if($.mob.LG()) {
+					html.addClass('LG');
+				}
+				if($.mob.motorola()) {
+					html.addClass('motorola');
+				}
 			},
 			addOSClass : function() {
 				var html = $('html');
-				if($.mob.ios3()) {
+				if($.mob.ios()) {
 					html.addClass('ios');
+				}
+				if($.mob.ios3()) {
 					html.addClass('ios3');
 				}
 				if($.mob.ios4()) {
-					html.addClass('ios');
 					html.addClass('ios4');
 				}
 				if($.mob.ios5()) {
-					html.addClass('ios');
 					html.addClass('ios5');
 				}
 				if($.mob.windowsPhone7()) {
