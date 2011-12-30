@@ -22,7 +22,7 @@ You can detect several devices. All detections returns a boolean, You can detect
 + iOs 5				: $.mob.ios5();
 + Android			: $.mob.android();
 + Windows Phone 7	: $.mob.windowsPhone7();
-+IE Mobile 9		: $.mob.iemobile9();
++ IE Mobile 9		: $.mob.iemobile9();
 
 
 ### Add your device and os classes
