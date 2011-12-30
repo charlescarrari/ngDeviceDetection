@@ -119,7 +119,7 @@ jQuery.extend( {
 				}
 			},
 			addClasses : function() {
-				$.mob.addDeviceClasses();
+				$.mob.addDeviceClass();
 				$.mob.addOSClass();
 			}
 		}
