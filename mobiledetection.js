@@ -35,13 +35,13 @@ jQuery.extend( {
 				return ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
 			},
 			ios3 : function() {
-				return ($.mob.userAgent.indexOf('iphone os 3') != -1) && ($.mob.ios());
+				return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mob.ios());
 			},
 			ios4 : function() {
-				return ($.mob.userAgent.indexOf('iphone os 4') != -1) && ($.mob.ios());
+				return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mob.ios());
 			},
 			ios5 : function() {
-				return ($.mob.userAgent.indexOf('iphone os 5') != -1) && ($.mob.ios());
+				return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mob.ios());
 			},
 			iphone : function() {
 				return $.mob.userAgent.indexOf('iphone') != -1;
