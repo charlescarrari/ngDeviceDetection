@@ -26,23 +26,10 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 jQuery.extend( {
-	    mob : {
+		rpow : {
 			userAgent : navigator.userAgent.toLowerCase(),
-			apple : function() {
-				return $.mob.userAgent.indexOf('apple') != -1;
-			},
-			ios : function() {
-				return ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
-			},
-			ios3 : function() {
-				return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mob.ios());
-			},
-			ios4 : function() {
-				return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mob.ios());
-			},
-			ios5 : function() {
-				return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mob.ios());
-			},
+		},
+	    mobiledevice : {
 			iphone : function() {
 				return $.mob.userAgent.indexOf('iphone') != -1;
 			},
@@ -51,18 +38,6 @@ jQuery.extend( {
 			},
 			ipad : function() {
 				return $.mob.userAgent.indexOf('ipad') != -1;
-			},
-			windowsPhone7 : function() {
-				return $.mob.userAgent.indexOf('windows phone os 7') != -1;
-			},
-			iemobile9 : function() {
-				return $.mob.userAgent.indexOf('iemobile/9') != -1;
-			},
-			android : function () {
-				return $.mob.userAgent.indexOf('android') != -1;
-			},
-			blackberry : function() {
-				return $.mob.userAgent.indexOf('blackberry') != -1;
 			},
 			htc : function() {
 				return $.mob.userAgent.indexOf('htc') != -1;
@@ -84,70 +59,122 @@ jQuery.extend( {
 			},
 			samsung : function() {
 				return $.mob.userAgent.indexOf('samsung') != -1;
+			}
+	    },
+	    mobilebrowser : {
+			iemobile9 : function() {
+				return $.mob.userAgent.indexOf('iemobile/9') != -1;
 			},
-			addDeviceClass : function() {
+			operamini : function() {
+				return $.mob.userAgent.indexOf('opera mini') != -1;
+			},
+			firefox : function() {
+				return $.mob.userAgent.indexOf('firefox') != -1;
+			},
+			webkit : function() {
+				return $.mob.userAgent.indexOf('webkit') != -1;
+			}
+	    },
+	    mobileOS : {
+			ios : function() {
+				return ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
+			},
+			ios3 : function() {
+				return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mob.ios());
+			},
+			ios4 : function() {
+				return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mob.ios());
+			},
+			ios5 : function() {
+				return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mob.ios());
+			},
+			windowsPhone7 : function() {
+				return $.mob.userAgent.indexOf('windows phone os 7') != -1;
+			},
+			android : function () {
+				return $.mob.userAgent.indexOf('android') != -1;
+			},
+			blackberry : function() {
+				return $.mob.userAgent.indexOf('blackberry') != -1;
+			}
+	    },
+	    mob : {
+	    	addDeviceClass : function() {
 				var html = $('html');
-				if($.mob.ipad()) {
+				if($.mobiledevice.ipad()) {
 					html.addClass('ipad');
 				}
-				if($.mob.iphone()) {
+				if($.mobiledevice.iphone()) {
 					html.addClass('iphone');
 				}
-				if($.mob.ipod()) {
+				if($.mobiledevice.ipod()) {
 					html.addClass('ipod');
 				}
-				if($.mob.blackberry()) {
+				if($.mobiledevice.blackberry()) {
 					html.addClass('blackberry');
 				}
-				if($.mob.htc()) {
+				if($.mobiledevice.htc()) {
 					html.addClass('htc');
 				}
-				if($.mob.nokia()) {
+				if($.mobiledevice.nokia()) {
 					html.addClass('nokia');
 				}
-				if($.mob.samsung()) {
+				if($.mobiledevice.samsung()) {
 					html.addClass('samsung');
 				}
-				if($.mob.sonyericsson()) {
+				if($.mobiledevice.sonyericsson()) {
 					html.addClass('sonyericsson');
 				}
-				if($.mob.acer()) {
+				if($.mobiledevice.acer()) {
 					html.addClass('acer');
 				}
-				if($.mob.LG()) {
+				if($.mobiledevice.LG()) {
 					html.addClass('LG');
 				}
-				if($.mob.motorola()) {
+				if($.mobiledevice.motorola()) {
 					html.addClass('motorola');
+				}
+			},
+			addBrowserClass : function() {
+				var html = $('html');
+				if($.mobilebrowser.iemobile9()) {
+					html.addClass('iemobile9');
+				}
+				if($.mobilebrowser.operamini()) {
+					html.addClass('operamini');
+				}
+				if($.mobilebrowser.firefox()) {
+					html.addClass('firefox');
+				}
+				if($.mobilebrowser.webkit()) {
+					html.addClass('webkit');
 				}
 			},
 			addOSClass : function() {
 				var html = $('html');
-				if($.mob.ios()) {
+				if($.mobileOS.ios()) {
 					html.addClass('ios');
 				}
-				if($.mob.ios3()) {
+				if($.mobileOS.ios3()) {
 					html.addClass('ios3');
 				}
-				if($.mob.ios4()) {
+				if($.mobileOS.ios4()) {
 					html.addClass('ios4');
 				}
-				if($.mob.ios5()) {
+				if($.mobileOS.ios5()) {
 					html.addClass('ios5');
 				}
-				if($.mob.windowsPhone7()) {
+				if($.mobileOS.windowsPhone7()) {
 					html.addClass('windowsphone');
 				}
-				if($.mob.iemobile9()) {
-					html.addClass('iemobile9');
-				}
-				if($.mob.android()) {
+				if($.mobileOS.android()) {
 					html.addClass('android');
 				}
 			},
 			addClasses : function() {
 				$.mob.addDeviceClass();
+				$.mob.addBrowserClass();
 				$.mob.addOSClass();
 			}
-		}
+	    }			
 	});
