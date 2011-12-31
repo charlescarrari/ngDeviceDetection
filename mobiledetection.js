@@ -74,16 +74,16 @@ jQuery.extend( {
     },
     mobileOS : {
 		ios : function() {
-			return ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
+			return ($.mobiledevice.iphone() || $.mobiledevice.ipad() || $.mobiledevice.ipod());
 		},
 		ios3 : function() {
-			return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mob.ios());
+			return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mobileOS.ios());
 		},
 		ios4 : function() {
-			return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mob.ios());
+			return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mobileOS.ios());
 		},
 		ios5 : function() {
-			return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mob.ios());
+			return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mobileOS.ios());
 		},
 		windowsPhone7 : function() {
 			return $.mob.userAgent.indexOf('windows phone os 7') != -1;
