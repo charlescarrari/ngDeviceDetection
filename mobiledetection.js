@@ -26,9 +26,6 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 jQuery.extend( {
-		rpow : {
-			userAgent : navigator.userAgent.toLowerCase(),
-		},
 	    mobiledevice : {
 			iphone : function() {
 				return $.mob.userAgent.indexOf('iphone') != -1;
@@ -99,6 +96,7 @@ jQuery.extend( {
 			}
 	    },
 	    mob : {
+	    	userAgent : navigator.userAgent.toLowerCase(),
 	    	addDeviceClass : function() {
 				var html = $('html');
 				if($.mobiledevice.ipad()) {
