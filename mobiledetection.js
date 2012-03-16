@@ -91,6 +91,21 @@ jQuery.extend( {
 		android : function () {
 			return $.mob.userAgent.indexOf('android') != -1;
 		},
+		android2_1 : function () {
+			return $.mob.userAgent.indexOf('android 2.1') != -1;
+		},
+		android2_2 : function () {
+			return $.mob.userAgent.indexOf('android 2.2') != -1;
+		},
+		android2_3 : function () {
+			return $.mob.userAgent.indexOf('android 2.3') != -1;
+		},
+		android3 : function () {
+			return $.mob.userAgent.indexOf('android 3') != -1;
+		},
+		android4 : function () {
+			return $.mob.userAgent.indexOf('android 4') != -1;
+		},
 		blackberry : function() {
 			return $.mob.userAgent.indexOf('blackberry') != -1;
 		}
@@ -167,6 +182,21 @@ jQuery.extend( {
 			}
 			if($.mobileOS.android()) {
 				html.addClass('android');
+			}
+			if($.mobileOS.android2_1()) {
+				html.addClass('android2_1');
+			}
+			if($.mobileOS.android2_2()) {
+				html.addClass('android2_2');
+			}
+			if($.mobileOS.android2_3()) {
+				html.addClass('android2_3');
+			}
+			if($.mobileOS.android3()) {
+				html.addClass('android3');
+			}
+			if($.mobileOS.android4()) {
+				html.addClass('android4');
 			}
 			if($.mobileOS.blackberry()) {
 				html.addClass('blackberry');

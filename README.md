@@ -24,7 +24,12 @@ You can detect several Operating systems. All detections returns a boolean, You 
 + iOs 3				: $.mobileOS.ios3();
 + iOs 4				: $.mobileOS.ios4();
 + iOs 5				: $.mobileOS.ios5();
-+ Android			: $.mobileOS.android();
++ Android (all)		: $.mobileOS.android();
++ Android 2.1		: $.mobileOS.android2_1();
++ Android 2.2		: $.mobileOS.android2_2();
++ Android 2.3		: $.mobileOS.android2_3();
++ Android 3			: $.mobileOS.android3();
++ Android 4			: $.mobileOS.android4();
 + Windows Phone 7	: $.mobileOS.windowsPhone7();
 
 
