@@ -1,4 +1,4 @@
-/*!
+/*
  * Detect mobile browsers and devices
  *
  * Version 1.0
