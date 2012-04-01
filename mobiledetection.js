@@ -114,7 +114,7 @@ jQuery.extend( {
     	userAgent : navigator.userAgent.toLowerCase(),
 		retina : function() {
 			return window.devicePixelRatio >= 2;
-		}
+		},
     	addDeviceClass : function() {
 			var html = $('html');
 			if($.mobiledevice.ipad()) {
