@@ -1,5 +1,12 @@
 This plugin comes with the most common devices and os systems for modern mobile web developers. It's inspired by html5boilerplate and jquery's  $.browser extension.
 
+## NEW!! Detect retina displays
+You can now detect if your device has a display with a double pixel ratio (Like Apple's retina).
+
++ $.mob.retina();
+
+
+
 ### Detect your device
 You can detect several devices. All detections returns a boolean, You can detect for the following devices:
 
@@ -47,7 +54,7 @@ Like in html5boilerplate where you get extra classes for the classic IE browsers
 It's done with just one extra line of code.
 
 
-# add both OS and Device classes
+# add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag.
 $.mob.addClasses(); 
 
 # add OS class(es)

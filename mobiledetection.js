@@ -112,6 +112,9 @@ jQuery.extend( {
     },
     mob : {
     	userAgent : navigator.userAgent.toLowerCase(),
+		retina : function() {
+			return window.devicePixelRatio >= 2;
+		}
     	addDeviceClass : function() {
 			var html = $('html');
 			if($.mobiledevice.ipad()) {
@@ -146,6 +149,9 @@ jQuery.extend( {
 			}
 			if($.mobiledevice.motorola()) {
 				html.addClass('motorola');
+			}
+			if($.mob.retina()) {
+				html.addClass('retina');
 			}
 		},
 		addBrowserClass : function() {
