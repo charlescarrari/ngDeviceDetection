@@ -1,5 +1,5 @@
 <?php
-		
+
 	/*
 	 * Detect mobile browsers and devices
 	 *
@@ -120,5 +120,20 @@
 		
 		public function webkit() {
 			return (bool) strpos($this -> _userAgent,'webkit');
+		}
+		
+		public function retina() {
+			
+			if(isset($_COOKIE["devicePixelRation"])) :
+	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
+		        return $devicePixelRatio >= 2;
+			else :
+		    	echo '<script>';
+		        echo 'var the_cookie = "devicePixelRation="+window.devicePixelRatio+";"+the_cookie;';
+		        echo 'document.cookie = the_cookie;';
+		        echo 'location = "'. $_SERVER['PHP_SELF'] . '";';
+		    	echo '</script>';
+				
+		    endif;
 		}
 	}

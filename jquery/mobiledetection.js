@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 1.0
+ * Version 1.1
  *
  * Author: Jos Koomen - RocketPower
  * Twitter : @_RocketPower
@@ -55,7 +55,7 @@ jQuery.extend( {
 			return $.mob.userAgent.indexOf('nokia') != -1;
 		},
 		samsung : function() {
-			return $.mob.userAgent.indexOf('samsung') != -1;
+			return $.mob.userAgent.indexOf('gt-') != -1 || $.mob.userAgent.indexOf('galaxy') != -1;
 		}
     },
     mobilebrowser : {

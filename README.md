@@ -54,14 +54,26 @@ Like in html5boilerplate where you get extra classes for the classic IE browsers
 It's done with just one extra line of code.
 
 
-# add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag.
+### add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag.
 $.mob.addClasses(); 
 
-# add OS class(es)
+### add OS class(es)
 $.mob.addOSClass();
 
-# add Device class(es)
+### add Device class(es)
 $.mob.addDeviceClass();
 
-# add Browser class(es)
+### add Browser class(es)
 $.mob.addBrowserClass();
+
+### There is also a php class with the major checks
+<?php 
+
+	$md = new MobileDetection();
+	if($md -> ios(5)) :
+		// do iOS 5 stuff
+	else :
+		// do other stuff;
+	endif;
+	
+?>
