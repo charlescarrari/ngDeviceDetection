@@ -69,11 +69,27 @@ $.mob.addBrowserClass();
 ### There is also a php class with the major checks
 <?php 
 
-	$md = new MobileDetection();
-	if($md -> ios(5)) :
+	$mobile_detection = new MobileDetection();
+	if($mobile_detection -> ios(5)) :
 		// do iOS 5 stuff
 	else :
 		// do other stuff;
 	endif;
 	
 ?>
+
+### The new Wordpress plugin
+<?php 
+	
+	// in your theme use:
+	global $mobile_detection;
+	
+	if($mobile_detection -> ios(5)) :
+		// do iOS 5 stuff
+	else :
+		// do other stuff;
+	endif;
+	
+?>
+
+The wordpress plugin automatic instantiates the class.
