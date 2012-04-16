@@ -124,12 +124,12 @@
 		
 		public function retina() {
 			
-			if(isset($_COOKIE["devicePixelRation"])) :
+			if(isset($_COOKIE["devicePixelRatio"])) :
 	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
-		        return $devicePixelRatio >= 2;
+		        return ($devicePixelRatio >= 2);
 			else :
 		    	echo '<script>';
-		        echo 'var the_cookie = "devicePixelRation="+window.devicePixelRatio+";"+the_cookie;';
+		        echo 'var the_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+the_cookie;';
 		        echo 'document.cookie = the_cookie;';
 		        echo 'location = "'. $_SERVER['PHP_SELF'] . '";';
 		    	echo '</script>';
