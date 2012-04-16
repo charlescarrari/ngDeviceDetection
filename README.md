@@ -6,7 +6,6 @@ You can now detect if your device has a display with a double pixel ratio (Like 
 + $.mob.retina();
 
 
-
 ### Detect your device
 You can detect several devices. All detections returns a boolean, You can detect for the following devices:
 
@@ -78,7 +77,7 @@ $.mob.addBrowserClass();
 	
 ?>
 
-### The new Wordpress plugin
+## The new Wordpress plugin
 <?php 
 	
 	// in your theme use:
@@ -93,3 +92,18 @@ $.mob.addBrowserClass();
 ?>
 
 The wordpress plugin automatic instantiates the class.
+
+### php methods
+$mobile_detection -> iPad(); // returns boolean
+$mobile_detection -> iPhone(); // returns boolean
+$mobile_detection -> iPod(); // returns boolean
+$mobile_detection -> iOS($version); // param $version = 3,4 or 5 - returns boolean 
+$mobile_detection -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 - returns boolean
+$mobile_detection -> blackberry(); // returns boolean
+$mobile_detection -> windowsPhone7(); // returns boolean
+$mobile_detection -> ieMobile9(); // returns boolean
+$mobile_detection -> operamini(); // returns boolean
+$mobile_detection -> firefox(); // returns boolean
+$mobile_detection -> webkit(); // returns boolean
+$mobile_detection -> retina(); // returns boolean if devicePixelRation >=2
+
