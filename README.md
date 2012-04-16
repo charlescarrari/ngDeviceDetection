@@ -106,5 +106,5 @@ The wordpress plugin automatic instantiates the class.
 + $mobile_detection -> operamini(); // returns boolean
 + $mobile_detection -> firefox(); // returns boolean
 + $mobile_detection -> webkit(); // returns boolean
-+ $mobile_detection -> retina(); // returns boolean if devicePixelRation >=2
++ $mobile_detection -> retina(); // returns boolean  | true when devicePixelRation >=2
 
