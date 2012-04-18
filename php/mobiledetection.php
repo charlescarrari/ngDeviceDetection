@@ -126,7 +126,7 @@
 			
 			if(isset($_COOKIE["devicePixelRatio"])) :
 	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
-		        return ($devicePixelRatio >= 2);
+		        return ($devicePixelRatio > 1);
 			else :
 		    	echo '<script>';
 		        echo 'var the_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+the_cookie;';
