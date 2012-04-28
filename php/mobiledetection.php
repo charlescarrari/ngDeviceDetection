@@ -31,6 +31,7 @@
 	class MobileDetection {
 		
 		private $_userAgent = null;
+		private $_simulateRetina = false;
 		
 		function __construct() {
 			$this->_userAgent = strtolower($_SERVER['HTTP_USER_AGENT']);
@@ -64,7 +65,7 @@
 					break;
 			}
 			
-			return false;
+			return true;
 		}
 		
 		
@@ -94,7 +95,7 @@
 					break;
 			}
 
-			return false;
+			return true;
 			
 		}
 		
@@ -123,6 +124,7 @@
 		}
 		
 		public function retina() {
+			if($this->_simulateRetina) return true;
 			
 			if(isset($_COOKIE["devicePixelRatio"])) :
 	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
@@ -136,4 +138,9 @@
 				
 		    endif;
 		}
+		
+		public function simulateRetina($simulate = true) {
+			$this->_simulateRetina = $simulate;
+		}
+		
 	}
