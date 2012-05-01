@@ -1,9 +1,23 @@
 This plugin comes with the most common devices and os systems for modern mobile web developers. It's inspired by html5boilerplate and jquery's  $.browser extension.
 
-## NEW!! Detect retina displays
-You can now detect if your device has a display with a double pixel ratio (Like Apple's retina).
+### Detect retina displays
+You can detect if your device has a display with a double pixel ratio (Like Apple's retina).
 
-+ $.mob.retina();
++ $.mob.retina(); // returns boolean
+
+
+### Detect standalone web applications
+Detect if your web application is running in standalone mode or in safari
+
++ $.mob.standalone();  // returns boolean
+
+
+### Detect orientation
+You can detect the orientation of your device.
+
++ $.mob.orientation(); // returns 'portrait' or 'landscape' as string
++ $.mob.portrait(); // returns boolean
++ $.mob.landscape(); // returns boolean
 
 
 ### Detect your device
@@ -98,13 +112,13 @@ The wordpress plugin automatic instantiates the class.
 + $mobile_detection -> iPad(); // returns boolean
 + $mobile_detection -> iPhone(); // returns boolean
 + $mobile_detection -> iPod(); // returns boolean
-+ $mobile_detection -> iOS($version); // param $version = 3,4 or 5 - returns boolean 
-+ $mobile_detection -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 - returns boolean
++ $mobile_detection -> iOS($version); // param $version = 3,4 or 5 (not mandatory) - returns boolean 
++ $mobile_detection -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
 + $mobile_detection -> blackberry(); // returns boolean
 + $mobile_detection -> windowsPhone7(); // returns boolean
 + $mobile_detection -> ieMobile9(); // returns boolean
 + $mobile_detection -> operamini(); // returns boolean
 + $mobile_detection -> firefox(); // returns boolean
 + $mobile_detection -> webkit(); // returns boolean
-+ $mobile_detection -> retina(); // returns boolean  | true when devicePixelRation >=2
++ $mobile_detection -> retina(); // returns boolean  | true when devicePixelRation > 1
 

@@ -115,6 +115,18 @@ jQuery.extend( {
 		retina : function() {
 			return window.devicePixelRatio > 1;
 		},
+		standalone : function() {
+			return window.navigator.standalone == true;
+		},
+		orientation : function() {
+			return $.mob.portrait() ? 'portrait' : 'landscape';
+		},
+		landscape : function() {
+			return window.orientation===-90||window.orientation===90;
+		},
+		portrait : function() {
+			return window.orientation===0||window.orientation===180;
+		},
     	addDeviceClass : function() {
 			var html = $('html');
 			if($.mobiledevice.ipad()) {
