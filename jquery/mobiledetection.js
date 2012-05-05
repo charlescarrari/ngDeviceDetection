@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 1.1
+ * Version 2.0
  *
  * Author: Jos Koomen - RocketPower
  * Twitter : @_RocketPower
@@ -26,7 +26,8 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 jQuery.extend( {
-    mobiledevice : {
+    mob : {
+    	userAgent : navigator.userAgent.toLowerCase(),
 		iphone : function() {
 			return $.mob.userAgent.indexOf('iphone') != -1;
 		},
@@ -56,9 +57,7 @@ jQuery.extend( {
 		},
 		samsung : function() {
 			return $.mob.userAgent.indexOf('gt-') != -1 || $.mob.userAgent.indexOf('galaxy') != -1;
-		}
-    },
-    mobilebrowser : {
+		},
 		iemobile9 : function() {
 			return $.mob.userAgent.indexOf('iemobile/9') != -1;
 		},
@@ -70,153 +69,153 @@ jQuery.extend( {
 		},
 		webkit : function() {
 			return $.mob.userAgent.indexOf('webkit') != -1;
-		}
-    },
-    mobileOS : {
-		ios : function() {
-			return ($.mobiledevice.iphone() || $.mobiledevice.ipad() || $.mobiledevice.ipod());
 		},
-		ios3 : function() {
-			return ($.mob.userAgent.indexOf('os 3') != -1) && ($.mobileOS.ios());
+		ios : function(version) {
+			var a = ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
+			if(!a) return false;
+			if(version != undefined) {
+				switch(version) {
+					case '3':
+						return ($.mob.userAgent.indexOf('os 3') != -1) && $.mob.ios();
+					case '4':
+						return ($.mob.userAgent.indexOf('os 4') != -1) && $.mob.ios();
+					case '5':
+						return ($.mob.userAgent.indexOf('os 5') != -1) && $.mob.ios();
+					default:
+						return a;
+				}
+			}
+			return a;
 		},
-		ios4 : function() {
-			return ($.mob.userAgent.indexOf('os 4') != -1) && ($.mobileOS.ios());
-		},
-		ios5 : function() {
-			return ($.mob.userAgent.indexOf('os 5') != -1) && ($.mobileOS.ios());
-		},
-		windowsPhone7 : function() {
+		windowsphone7 : function() {
 			return $.mob.userAgent.indexOf('windows phone os 7') != -1;
 		},
-		android : function () {
-			return $.mob.userAgent.indexOf('android') != -1;
-		},
-		android2_1 : function () {
-			return $.mob.userAgent.indexOf('android 2.1') != -1;
-		},
-		android2_2 : function () {
-			return $.mob.userAgent.indexOf('android 2.2') != -1;
-		},
-		android2_3 : function () {
-			return $.mob.userAgent.indexOf('android 2.3') != -1;
-		},
-		android3 : function () {
-			return $.mob.userAgent.indexOf('android 3') != -1;
-		},
-		android4 : function () {
-			return $.mob.userAgent.indexOf('android 4') != -1;
+		android : function (version) {
+			var a = $.mob.userAgent.indexOf('android') != -1;
+			if(!a) return false;
+			if(version != undefined) {
+				switch(version) {
+					case '2.1':
+						return $.mob.userAgent.indexOf('android 2.1') != -1;
+					case '2.2':
+						return $.mob.userAgent.indexOf('android 2.2') != -1;
+					case '2.3':
+						return $.mob.userAgent.indexOf('android 2.3') != -1;
+					case '3':
+						return $.mob.userAgent.indexOf('android 3') != -1;
+					case '4':
+						return $.mob.userAgent.indexOf('android 4') != -1;
+					default:
+						return a;
+				}
+			}
+			return a;
 		},
 		blackberry : function() {
 			return $.mob.userAgent.indexOf('blackberry') != -1;
-		}
-    },
-    mob : {
-    	userAgent : navigator.userAgent.toLowerCase(),
+		},
 		retina : function() {
 			return window.devicePixelRatio > 1;
 		},
 		standalone : function() {
-			return window.navigator.standalone == true;
+			return ("standalone" in window.navigator) && (window.navigator.standalone == true);
 		},
 		orientation : function() {
 			return $.mob.portrait() ? 'portrait' : 'landscape';
 		},
 		landscape : function() {
-			return window.orientation===-90||window.orientation===90;
+			return (window.orientation===-90)||(window.orientation===90);
 		},
 		portrait : function() {
-			return window.orientation===0||window.orientation===180;
+			return (window.orientation===0)||(window.orientation===180);
 		},
     	addDeviceClass : function() {
 			var html = $('html');
-			if($.mobiledevice.ipad()) {
+			if($.mob.ipad()) {
 				html.addClass('ipad');
 			}
-			if($.mobiledevice.iphone()) {
+			if($.mob.iphone()) {
 				html.addClass('iphone');
 			}
-			if($.mobiledevice.ipod()) {
+			if($.mob.ipod()) {
 				html.addClass('ipod');
 			}
-			if($.mobileOS.blackberry()) {
+			if($.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
-			if($.mobiledevice.htc()) {
+			if($.mob.htc()) {
 				html.addClass('htc');
 			}
-			if($.mobiledevice.nokia()) {
+			if($.mob.nokia()) {
 				html.addClass('nokia');
 			}
-			if($.mobiledevice.samsung()) {
+			if($.mob.samsung()) {
 				html.addClass('samsung');
 			}
-			if($.mobiledevice.sonyericsson()) {
+			if($.mob.sonyericsson()) {
 				html.addClass('sonyericsson');
 			}
-			if($.mobiledevice.acer()) {
+			if($.mob.acer()) {
 				html.addClass('acer');
 			}
-			if($.mobiledevice.LG()) {
+			if($.mob.LG()) {
 				html.addClass('LG');
 			}
-			if($.mobiledevice.motorola()) {
+			if($.mob.motorola()) {
 				html.addClass('motorola');
-			}
-			if($.mob.retina()) {
-				html.addClass('retina');
 			}
 		},
 		addBrowserClass : function() {
 			var html = $('html');
-			if($.mobilebrowser.iemobile9()) {
+			if($.mob.iemobile9()) {
 				html.addClass('iemobile9');
 			}
-			if($.mobilebrowser.operamini()) {
+			else if($.mob.operamini()) {
 				html.addClass('operamini');
 			}
-			if($.mobilebrowser.firefox()) {
+			else if($.mob.firefox()) {
 				html.addClass('firefox');
 			}
-			if($.mobilebrowser.webkit()) {
+			else if($.mob.webkit()) {
 				html.addClass('webkit');
 			}
 		},
 		addOSClass : function() {
 			var html = $('html');
-			if($.mobileOS.ios()) {
+			if($.mob.ios()) {
 				html.addClass('ios');
+				if($.mob.ios('3')) {
+					html.addClass('ios3');
+				}
+				else if($.mob.ios('4')) {
+					html.addClass('ios4');
+				}
+				else if($.mob.ios('5')) {
+					html.addClass('ios5');
+				}
 			}
-			if($.mobileOS.ios3()) {
-				html.addClass('ios3');
-			}
-			if($.mobileOS.ios4()) {
-				html.addClass('ios4');
-			}
-			if($.mobileOS.ios5()) {
-				html.addClass('ios5');
-			}
-			if($.mobileOS.windowsPhone7()) {
+			if($.mob.windowsphone7()) {
 				html.addClass('windowsphone');
 			}
-			if($.mobileOS.android()) {
+			if($.mob.android()) {
 				html.addClass('android');
+				if($.mob.android('2.1')) {
+					html.addClass('android2-1');
+				}
+				else if($.mob.android('2.2')) {
+					html.addClass('android2-2');
+				}
+				else if($.mob.android('2.3')) {
+					html.addClass('android2-3');
+				}
+				else if($.mob.android('3')) {
+					html.addClass('android3');
+				}
+				else if($.mob.android('4')) {
+					html.addClass('android4');
+				}
 			}
-			if($.mobileOS.android2_1()) {
-				html.addClass('android2_1');
-			}
-			if($.mobileOS.android2_2()) {
-				html.addClass('android2_2');
-			}
-			if($.mobileOS.android2_3()) {
-				html.addClass('android2_3');
-			}
-			if($.mobileOS.android3()) {
-				html.addClass('android3');
-			}
-			if($.mobileOS.android4()) {
-				html.addClass('android4');
-			}
-			if($.mobileOS.blackberry()) {
+			if($.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
 		},
@@ -224,6 +223,12 @@ jQuery.extend( {
 			$.mob.addDeviceClass();
 			$.mob.addBrowserClass();
 			$.mob.addOSClass();
+			if($.mob.retina()) {
+				html.addClass('retina');
+			}
+			if($.mob.standalone()) {
+				html.addClass('standalone');
+			}
 		}
     }			
 });

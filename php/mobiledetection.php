@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 1.0
+	 * Version 2.0
 	 *
 	 * Author: Jos Koomen - RocketPower
 	 * Twitter : @_RocketPower
@@ -56,13 +56,13 @@
 			switch($version) {
 				case 3:
 					return (bool) strpos($this -> _userAgent,'os 3');
-					break;
 				case 4:
 					return (bool) strpos($this -> _userAgent,'os 4');				
-					break;
 				case 5:
 					return (bool) strpos($this -> _userAgent,'os 5');
-					break;
+				case 0:
+				default:
+					return true;
 			}
 			
 			return true;
@@ -76,23 +76,17 @@
 			switch($version) {
 				case 2.1:
 					return (bool) strpos($this -> _userAgent,'android 2.1');
-					break;
 				case 2.2:
 					return (bool) strpos($this -> _userAgent,'android 2.2');				
-					break;
 				case 2.3:
 					return (bool) strpos($this -> _userAgent,'android 2.3');
-					break;
 				case 3:
 					return (bool) strpos($this -> _userAgent,'android 3');
-					break;
 				case 4:
 					return (bool) strpos($this -> _userAgent,'android 4');
-					break;
 				case 0;
 				default:
 					return true;
-					break;
 			}
 
 			return true;
@@ -111,7 +105,7 @@
 			return (bool) strpos($this -> _userAgent,'iemobile/9');
 		}
 		
-		public function operamini() {
+		public function operaMini() {
 			return (bool) strpos($this -> _userAgent,'opera mini');
 		}
 		
@@ -131,8 +125,8 @@
 		        return ($devicePixelRatio > 1);
 			else :
 		    	echo '<script>';
-		        echo 'var the_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+the_cookie;';
-		        echo 'document.cookie = the_cookie;';
+		        echo 'var dpr_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+dpr_cookie;';
+		        echo 'document.cookie = dpr_cookie;';
 		        echo 'location = "'. $_SERVER['PHP_SELF'] . '";';
 		    	echo '</script>';
 				

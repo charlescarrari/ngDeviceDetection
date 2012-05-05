@@ -8,7 +8,7 @@
 	Plugin Name: Mobile Detection
 	Plugin URI: http://rpow.nl/gitmob
 	Description: A plugin with functions to detect a users mobile os, browser and or device
-	Version: 1.0
+	Version: 2.0
 	Author: RocketPower 
 	Author URI: http://www.RocketPower.nu
 	License: GPLv2 or later
@@ -34,6 +34,6 @@
 	// include the detection class
 	include_once('mobiledetection.php');
 	// initialize class
-	$mobile_detection = new MobileDetection();
+	$mobile = new MobileDetection();
 	// And that's the whole shebang!
 	

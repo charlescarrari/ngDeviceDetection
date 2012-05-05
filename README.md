@@ -1,4 +1,4 @@
-This plugin comes with the most common devices and os systems for modern mobile web developers. It's inspired by html5boilerplate and jquery's  $.browser extension.
+This plugin comes with the most common devices and os systems for modern mobile web developers. It's inspired by html5boilerplate (it's using ie classes for the html tag) and jquery's  $.browser extension.
 
 ### Detect retina displays
 You can detect if your device has a display with a double pixel ratio (Like Apple's retina).
@@ -21,53 +21,58 @@ You can detect the orientation of your device.
 
 
 ### Detect your device
-You can detect several devices. All detections returns a boolean, You can detect for the following devices:
+You can detect several devices. All detections returns a boolean. All functions are added to the 'mob' object.
+You can detect the following devices:
 
-+ iPhone 		: $.mobiledevice.iphone();
-+ iPad  		: $.mobiledevice.ipad();
-+ iPod 			: $.mobiledevice.ipod();
-+ Nokia			: $.mobiledevice.nokia();
-+ HTC 			: $.mobiledevice.htc();
-+ Samsung		: $.mobiledevice.samsung();
-+ Blackberry	: $.mobiledevice.blackberry();
-+ HTC			: $.mobiledevice.htc();
-+ Acer			: $.mobiledevice.acer();
-+ SonyEricsson	: $.mobiledevice.sonyericsson();
-+ Motorola		: $.mobiledevice.motorola();
-+ LG			: $.mobiledevice.LG();
++ iPhone 		: $.mob.iphone();
++ iPad  		: $.mob.ipad();
++ iPod 			: $.mob.ipod();
++ Nokia			: $.mob.nokia();
++ HTC 			: $.mob.htc();
++ Samsung		: $.mob.samsung();
++ Blackberry	: $.mob.blackberry();
++ HTC			: $.mob.htc();
++ Acer			: $.mob.acer();
++ SonyEricsson	: $.mob.sonyericsson();
++ Motorola		: $.mob.motorola();
++ LG			: $.mob.LG();
 
 
 ### Detect your OS
-You can detect several Operating systems. All detections returns a boolean, You can detect for the following Operating systems:
+You can detect several Operating systems. All detections returns a boolean. All functions are added to the 'mob' object. Android and iOS subversions are no longer seperate functions.
+You can detect the following Operating systems:
 
-+ iOs (all)			: $.mobileOS.ios();
-+ iOs 3				: $.mobileOS.ios3();
-+ iOs 4				: $.mobileOS.ios4();
-+ iOs 5				: $.mobileOS.ios5();
-+ Android (all)		: $.mobileOS.android();
-+ Android 2.1		: $.mobileOS.android2_1();
-+ Android 2.2		: $.mobileOS.android2_2();
-+ Android 2.3		: $.mobileOS.android2_3();
-+ Android 3			: $.mobileOS.android3();
-+ Android 4			: $.mobileOS.android4();
-+ Windows Phone 7	: $.mobileOS.windowsPhone7();
++ iOs (all)			: $.mob.ios();
++ iOs 3				: $.mob.ios('3');
++ iOs 4				: $.mob.ios('4');
++ iOs 5				: $.mob.ios('5');
++ Android (all)		: $.mob.android();
++ Android 2.1		: $.mob.android('2.1');
++ Android 2.2		: $.mob.android('2.2');
++ Android 2.3		: $.mob.android('2.3');
++ Android 3			: $.mob.android('3');
++ Android 4			: $.mob.android('4');
++ Windows Phone 7	: $.mob.windowsphone7();
 
 
 ### Detect your mobile browser
-You can detect several Mobile browsers. All detections returns a boolean, You can detect for the following Browsers:
+You can detect several Mobile browsers. All detections returns a boolean. All functions are added to the 'mob' object.
+You can detect the following Browsers:
 
-+ Opera Mini		: $.mobilebrowser.operamini();
-+ Webkit			: $.mobilebrowser.webkit();
-+ Firefox			: $.mobilebrowser.firefox();
-+ IE Mobile			: $.mobilebrowser.iemobile();
++ Opera Mini		: $.mob.operamini();
++ Webkit			: $.mob.webkit();
++ Firefox			: $.mob.firefox();
++ IE Mobile			: $.mob.iemobile();
 
 
 ### Add your device, browser and os classes
 Like in html5boilerplate where you get extra classes for the classic IE browsers you can add classes for mobile devices and operating systems into your html tag
 It's done with just one extra line of code.
 
++ $.mob.addClasses(); 
 
-### add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag.
+
+### add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag and a class standalone (when in fullscreen mode on ios).
 $.mob.addClasses(); 
 
 ### add OS class(es)
@@ -82,8 +87,8 @@ $.mob.addBrowserClass();
 ### There is also a php class with the major checks
 <?php 
 
-	$mobile_detection = new MobileDetection();
-	if($mobile_detection -> ios(5)) :
+	$mobile = new MobileDetection();
+	if($mobile -> ios(5)) :
 		// do iOS 5 stuff
 	else :
 		// do other stuff;
@@ -98,9 +103,9 @@ The wordpress plugin automatic instantiates the class.
 <?php 
 	
 	// in your theme use:
-	global $mobile_detection;
+	global $mobile;
 	
-	if($mobile_detection -> ios(5)) :
+	if($mobile -> ios(5)) :
 		// do iOS 5 stuff
 	else :
 		// do other stuff;
@@ -109,16 +114,16 @@ The wordpress plugin automatic instantiates the class.
 ?>
 
 ### php methods
-+ $mobile_detection -> iPad(); // returns boolean
-+ $mobile_detection -> iPhone(); // returns boolean
-+ $mobile_detection -> iPod(); // returns boolean
-+ $mobile_detection -> iOS($version); // param $version = 3,4 or 5 (not mandatory) - returns boolean 
-+ $mobile_detection -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
-+ $mobile_detection -> blackberry(); // returns boolean
-+ $mobile_detection -> windowsPhone7(); // returns boolean
-+ $mobile_detection -> ieMobile9(); // returns boolean
-+ $mobile_detection -> operamini(); // returns boolean
-+ $mobile_detection -> firefox(); // returns boolean
-+ $mobile_detection -> webkit(); // returns boolean
-+ $mobile_detection -> retina(); // returns boolean  | true when devicePixelRation > 1
++ $mobile -> iPad(); // returns boolean
++ $mobile -> iPhone(); // returns boolean
++ $mobile -> iPod(); // returns boolean
++ $mobile -> iOS($version); // param $version = 3,4 or 5 (not mandatory) - returns boolean 
++ $mobile -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
++ $mobile -> blackberry(); // returns boolean
++ $mobile -> windowsPhone7(); // returns boolean
++ $mobile -> ieMobile9(); // returns boolean
++ $mobile -> operaMini(); // returns boolean
++ $mobile -> firefox(); // returns boolean
++ $mobile -> webkit(); // returns boolean
++ $mobile -> retina(); // returns boolean  | true when devicePixelRation > 1
 
