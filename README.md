@@ -46,6 +46,7 @@ You can detect the following Operating systems:
 + iOs 3				: $.mob.ios('3');
 + iOs 4				: $.mob.ios('4');
 + iOs 5				: $.mob.ios('5');
++ iOs 6				: $.mob.ios('6');
 + Android (all)		: $.mob.android();
 + Android 2.1		: $.mob.android('2.1');
 + Android 2.2		: $.mob.android('2.2');
@@ -96,9 +97,9 @@ $.mob.addBrowserClass();
 	
 ?>
 
-## The new Wordpress plugin
+### The Wordpress plugin
 
-The wordpress plugin automatic instantiates the class.
+The Wordpress plugin automatic instantiates the class.
 
 <?php 
 	
@@ -117,7 +118,7 @@ The wordpress plugin automatic instantiates the class.
 + $mobile -> iPad(); // returns boolean
 + $mobile -> iPhone(); // returns boolean
 + $mobile -> iPod(); // returns boolean
-+ $mobile -> iOS($version); // param $version = 3,4 or 5 (not mandatory) - returns boolean 
++ $mobile -> iOS($version); // param $version = 3,4,5 or 6 (not mandatory) - returns boolean 
 + $mobile -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
 + $mobile -> blackberry(); // returns boolean
 + $mobile -> windowsPhone7(); // returns boolean
@@ -127,3 +128,13 @@ The wordpress plugin automatic instantiates the class.
 + $mobile -> webkit(); // returns boolean
 + $mobile -> retina(); // returns boolean  | true when devicePixelRation > 1
 
+### NEW Native javascript version
+
+<script>
+	var mobile = new MobileDetection();
+	if(mobile.ios('5')) {
+		// do iOS 5 stuff	
+	} else {
+		// do other stuff;	
+	}
+</script>

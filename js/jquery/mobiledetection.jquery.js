@@ -72,17 +72,18 @@ jQuery.extend( {
 		},
 		ios : function(version) {
 			var a = ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
-			if(!a) return false;
-			if(version != undefined) {
+			if(version != undefined && a) {
 				switch(version) {
 					case '3':
-						return ($.mob.userAgent.indexOf('os 3') != -1) && $.mob.ios();
+						return ($.mob.userAgent.indexOf('os 3') != -1);
 					case '4':
-						return ($.mob.userAgent.indexOf('os 4') != -1) && $.mob.ios();
+						return ($.mob.userAgent.indexOf('os 4') != -1);
 					case '5':
-						return ($.mob.userAgent.indexOf('os 5') != -1) && $.mob.ios();
+						return ($.mob.userAgent.indexOf('os 5') != -1);
+					case '6':
+						return ($.mob.userAgent.indexOf('os 6') != -1);
 					default:
-						return a;
+						return false;
 				}
 			}
 			return a;
@@ -92,8 +93,7 @@ jQuery.extend( {
 		},
 		android : function (version) {
 			var a = $.mob.userAgent.indexOf('android') != -1;
-			if(!a) return false;
-			if(version != undefined) {
+			if(version != undefined && a) {
 				switch(version) {
 					case '2.1':
 						return $.mob.userAgent.indexOf('android 2.1') != -1;
@@ -106,7 +106,7 @@ jQuery.extend( {
 					case '4':
 						return $.mob.userAgent.indexOf('android 4') != -1;
 					default:
-						return a;
+						return false;
 				}
 			}
 			return a;
@@ -134,34 +134,34 @@ jQuery.extend( {
 			if($.mob.ipad()) {
 				html.addClass('ipad');
 			}
-			if($.mob.iphone()) {
+			else if($.mob.iphone()) {
 				html.addClass('iphone');
 			}
-			if($.mob.ipod()) {
+			else if($.mob.ipod()) {
 				html.addClass('ipod');
 			}
-			if($.mob.blackberry()) {
+			else if($.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
-			if($.mob.htc()) {
+			else if($.mob.htc()) {
 				html.addClass('htc');
 			}
-			if($.mob.nokia()) {
+			else if($.mob.nokia()) {
 				html.addClass('nokia');
 			}
-			if($.mob.samsung()) {
+			else if($.mob.samsung()) {
 				html.addClass('samsung');
 			}
-			if($.mob.sonyericsson()) {
+			else if($.mob.sonyericsson()) {
 				html.addClass('sonyericsson');
 			}
-			if($.mob.acer()) {
+			else if($.mob.acer()) {
 				html.addClass('acer');
 			}
-			if($.mob.LG()) {
+			else if($.mob.LG()) {
 				html.addClass('LG');
 			}
-			if($.mob.motorola()) {
+			else if($.mob.motorola()) {
 				html.addClass('motorola');
 			}
 		},
@@ -193,11 +193,14 @@ jQuery.extend( {
 				else if($.mob.ios('5')) {
 					html.addClass('ios5');
 				}
+				else if($.mob.ios('6')) {
+					html.addClass('ios6');
+				}
 			}
-			if($.mob.windowsphone7()) {
+			else if($.mob.windowsphone7()) {
 				html.addClass('windowsphone');
 			}
-			if($.mob.android()) {
+			else if($.mob.android()) {
 				html.addClass('android');
 				if($.mob.android('2.1')) {
 					html.addClass('android2-1');
@@ -215,7 +218,7 @@ jQuery.extend( {
 					html.addClass('android4');
 				}
 			}
-			if($.mob.blackberry()) {
+			else if($.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
 		},
