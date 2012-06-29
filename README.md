@@ -86,6 +86,8 @@ $.mob.addDeviceClass();
 $.mob.addBrowserClass();
 
 ### There is also a php class with the major checks
+
+<pre>
 <?php 
 
 	$mobile = new MobileDetection();
@@ -96,11 +98,13 @@ $.mob.addBrowserClass();
 	endif;
 	
 ?>
+</pre>
 
 ### The Wordpress plugin
 
 The Wordpress plugin automatic instantiates the class.
 
+<pre>
 <?php 
 	
 	// in your theme use:
@@ -113,6 +117,7 @@ The Wordpress plugin automatic instantiates the class.
 	endif;
 	
 ?>
+</pre>
 
 ### php methods
 + $mobile -> iPad(); // returns boolean
@@ -130,11 +135,11 @@ The Wordpress plugin automatic instantiates the class.
 
 ### NEW Native javascript version
 
-<script>
+<pre>
 	var mobile = new MobileDetection();
 	if(mobile.ios('5')) {
 		// do iOS 5 stuff	
 	} else {
 		// do other stuff;	
 	}
-</script>
+</pre>
