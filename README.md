@@ -135,7 +135,7 @@ The Wordpress plugin automatic instantiates the class.
 
 ### NEW Native javascript version
 
-<pre class="js">
+<pre type="js">
 	
 	// js script
 	
@@ -145,4 +145,5 @@ The Wordpress plugin automatic instantiates the class.
 	} else {
 		// do other stuff;	
 	}
+	
 </pre>
