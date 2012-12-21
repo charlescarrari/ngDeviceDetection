@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 2.0
+	 * Version 2.1
 	 *
 	 * Author: Jos Koomen - RocketPower
 	 * Twitter : @_RocketPower
@@ -122,7 +122,23 @@
 			
 			if(isset($_COOKIE["devicePixelRatio"])) :
 	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
-		        return ($devicePixelRatio > 1);
+		        return ($devicePixelRatio == 2);
+			else :
+		    	echo '<script>';
+		        echo 'var dpr_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+dpr_cookie;';
+		        echo 'document.cookie = dpr_cookie;';
+		        echo 'location = "'. $_SERVER['PHP_SELF'] . '";';
+		    	echo '</script>';
+				
+		    endif;
+		}
+		
+		public function halfretina() {
+			if($this->_simulateRetina) return false;
+			
+			if(isset($_COOKIE["devicePixelRatio"])) :
+	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
+		        return ($devicePixelRatio > 1 && $devicePixelRatio < 2);
 			else :
 		    	echo '<script>';
 		        echo 'var dpr_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+dpr_cookie;';

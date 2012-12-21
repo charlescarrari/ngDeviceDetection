@@ -8,7 +8,7 @@
 	Plugin Name: Mobile Detection
 	Plugin URI: http://rpow.nl/gitmob
 	Description: A plugin with functions to detect a users mobile os, browser and or device
-	Version: 2.0
+	Version: 2.1
 	Author: RocketPower 
 	Author URI: http://www.RocketPower.nu
 	License: GPLv2 or later

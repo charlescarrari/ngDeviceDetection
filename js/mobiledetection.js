@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.0
+ * Version 2.1
  *
  * Author: Jos Koomen - RocketPower
  * Twitter = @_RocketPower
@@ -25,7 +25,6 @@
  *   Free Software Foundation, Inc.,
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
-
 var MobileDetection = function() {
 		
 	this.iphone = function() {
@@ -135,8 +134,12 @@ var MobileDetection = function() {
 		return userAgent.indexOf('blackberry') != -1;
 	};
 		
+	this.halfretina = function() {
+		return window.devicePixelRatio > 1 && window.devicePixelRatio < 2;
+	};
+	
 	this.retina = function() {
-		return window.devicePixelRatio > 1;
+		return window.devicePixelRatio == 2;
 	};
 		
 	this.standalone = function() {
@@ -153,6 +156,14 @@ var MobileDetection = function() {
 		
 	this.portrait = function() {
 		return (window.orientation===0)||(window.orientation===180);
+	};
+	
+	this.touchdevice = function() {
+    	return !!('ontouchstart' in window);
+ 	};
+ 	
+ 	this.anysmartphone = function() {
+	 	return /android|webos|iphone|blackberry/i.test(userAgent);
 	};
 	
     this.addDeviceClass = function() {		
@@ -252,8 +263,17 @@ var MobileDetection = function() {
 		this.addDeviceClass();
 		this.addBrowserClass();
 		this.addOSClass();
+		if(this.halfretina()) {
+			addClassToHTMLTag('halfretina');
+		}
 		if(this.retina()) {
 			addClassToHTMLTag('retina');
+		}
+		if(this.touchdevice()()) {
+			addClassToHTMLTag('touch');
+		}
+		if(this.anysmartphone()()) {
+			addClassToHTMLTag('smartphone');
 		}
 		if(this.standalone()) {
 			addClassToHTMLTag('standalone');

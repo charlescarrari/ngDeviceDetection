@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.0
+ * Version 2.1
  *
  * Author: Jos Koomen - RocketPower
  * Twitter : @_RocketPower
@@ -114,8 +114,17 @@ jQuery.extend( {
 		blackberry : function() {
 			return $.mob.userAgent.indexOf('blackberry') != -1;
 		},
+		anysmartphone : function() {
+		 	return /android|webos|iphone|blackberry/i.test($.mob.userAgent);
+		},
+		touchdevice : function() {
+    		return !!('ontouchstart' in window);
+ 		},
+		halfretina : function() {
+			return window.devicePixelRatio > 1 && window.devicePixelRatio < 2;
+		},
 		retina : function() {
-			return window.devicePixelRatio > 1;
+			return window.devicePixelRatio == 2;
 		},
 		standalone : function() {
 			return ("standalone" in window.navigator) && (window.navigator.standalone == true);
@@ -231,6 +240,18 @@ jQuery.extend( {
 			}
 			if($.mob.standalone()) {
 				html.addClass('standalone');
+			}
+			if($.mob.retina()) {
+				html.addClass('retina');
+			}
+			if($.mob.halfretina()) {
+				html.addClass('halfretina');
+			}
+			if($.mob.anysmartphone()) {
+				html.addClass('smartphone');
+			}
+			if($.mob.touchdevice()) {
+				html.addClass('touch');
 			}
 		}
     }			

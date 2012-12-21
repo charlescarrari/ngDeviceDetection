@@ -3,14 +3,13 @@ This plugin comes with the most common devices and os systems for modern mobile 
 ### Detect retina displays
 You can detect if your device has a display with a double pixel ratio (Like Apple's retina).
 
-+ $.mob.retina(); // returns boolean
-
++ $.mob.retina(); // returns boolean (devicePixelRation == 2)
++ $.mob.halfretina(); // returns boolean (devicePixelRation > 1 && < 2)
 
 ### Detect standalone web applications
 Detect if your web application is running in standalone mode or in safari
 
 + $.mob.standalone();  // returns boolean
-
 
 ### Detect orientation
 You can detect the orientation of your device.
@@ -19,24 +18,22 @@ You can detect the orientation of your device.
 + $.mob.portrait(); // returns boolean
 + $.mob.landscape(); // returns boolean
 
-
 ### Detect your device
 You can detect several devices. All detections returns a boolean. All functions are added to the 'mob' object.
 You can detect the following devices:
 
-+ iPhone 		: $.mob.iphone();
-+ iPad  		: $.mob.ipad();
-+ iPod 			: $.mob.ipod();
-+ Nokia			: $.mob.nokia();
-+ HTC 			: $.mob.htc();
-+ Samsung		: $.mob.samsung();
-+ Blackberry	: $.mob.blackberry();
-+ HTC			: $.mob.htc();
-+ Acer			: $.mob.acer();
-+ SonyEricsson	: $.mob.sonyericsson();
-+ Motorola		: $.mob.motorola();
-+ LG			: $.mob.LG();
-
++ iPhone 			: $.mob.iphone();
++ iPad  			: $.mob.ipad();
++ iPod 				: $.mob.ipod();
++ Nokia				: $.mob.nokia();
++ HTC 				: $.mob.htc();
++ Samsung			: $.mob.samsung();
++ Blackberry		: $.mob.blackberry();
++ HTC				: $.mob.htc();
++ Acer				: $.mob.acer();
++ SonyEricsson		: $.mob.sonyericsson();
++ Motorola			: $.mob.motorola();
++ LG				: $.mob.LG();
 
 ### Detect your OS
 You can detect several Operating systems. All detections returns a boolean. All functions are added to the 'mob' object. Android and iOS subversions are no longer seperate functions.
@@ -55,7 +52,6 @@ You can detect the following Operating systems:
 + Android 4			: $.mob.android('4');
 + Windows Phone 7	: $.mob.windowsphone7();
 
-
 ### Detect your mobile browser
 You can detect several Mobile browsers. All detections returns a boolean. All functions are added to the 'mob' object.
 You can detect the following Browsers:
@@ -65,13 +61,17 @@ You can detect the following Browsers:
 + Firefox			: $.mob.firefox();
 + IE Mobile			: $.mob.iemobile();
 
+### Detect basics
+You can detect almost everything but if you're only interested in the function to check if a user uses a touch device or a smartphone you can use this:
+
++ Any SmartPhone	: $.mob.anysmartphone();
++ Touch				: $.mob.touchdevice();
 
 ### Add your device, browser and os classes
 Like in html5boilerplate where you get extra classes for the classic IE browsers you can add classes for mobile devices and operating systems into your html tag
 It's done with just one extra line of code.
 
 + $.mob.addClasses(); 
-
 
 ### add browser, OS & Device classes but also a class called "retina" (when you have a retina display) to your html tag and a class standalone (when in fullscreen mode on ios).
 $.mob.addClasses(); 
@@ -92,8 +92,8 @@ $.mob.addBrowserClass();
 	// phpcode
 
 	$mobile = new MobileDetection();
-	if($mobile -> ios(5)) :
-		// do iOS 5 stuff
+	if($mobile -> ios(6)) :
+		// do iOS 6 stuff
 	else :
 		// do other stuff;
 	endif;
@@ -111,8 +111,8 @@ The Wordpress plugin automatic instantiates the class.
 	// in your theme use:
 	global $mobile;
 	
-	if($mobile -> ios(5)) :
-		// do iOS 5 stuff
+	if($mobile -> ios(6)) :
+		// do iOS 6 stuff
 	else :
 		// do other stuff;
 	endif;
@@ -131,17 +131,18 @@ The Wordpress plugin automatic instantiates the class.
 + $mobile -> operaMini(); // returns boolean
 + $mobile -> firefox(); // returns boolean
 + $mobile -> webkit(); // returns boolean
-+ $mobile -> retina(); // returns boolean  | true when devicePixelRation > 1
++ $mobile -> retina(); // returns boolean  | true when devicePixelRation == 2
++ $mobile -> halfretina(); // returns boolean  | true when devicePixelRation > 1 && < 2
 
-### NEW Native javascript version
+### Native javascript version
 
 <pre>
 	
 	// js script
 
 	var mobile = new MobileDetection();
-	if(mobile.ios('5')) {
-		// do iOS 5 stuff	
+	if(mobile.ios('6')) {
+		// do iOS 6 stuff	
 	} else {
 		// do other stuff;	
 	}
