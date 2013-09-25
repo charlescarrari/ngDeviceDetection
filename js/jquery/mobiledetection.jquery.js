@@ -82,6 +82,8 @@ jQuery.extend( {
 						return ($.mob.userAgent.indexOf('os 5') != -1);
 					case '6':
 						return ($.mob.userAgent.indexOf('os 6') != -1);
+					case '7':
+						return ($.mob.userAgent.indexOf('os 7') != -1);
 					default:
 						return false;
 				}
@@ -204,6 +206,9 @@ jQuery.extend( {
 				}
 				else if($.mob.ios('6')) {
 					html.addClass('ios6');
+				}
+				else if($.mob.ios('7')) {
+					html.addClass('ios7');
 				}
 			}
 			else if($.mob.windowsphone7()) {

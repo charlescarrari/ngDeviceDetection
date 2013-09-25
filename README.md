@@ -44,6 +44,7 @@ You can detect the following Operating systems:
 + iOs 4				: $.mob.ios('4');
 + iOs 5				: $.mob.ios('5');
 + iOs 6				: $.mob.ios('6');
++ iOs 7				: $.mob.ios('7');
 + Android (all)		: $.mob.android();
 + Android 2.1		: $.mob.android('2.1');
 + Android 2.2		: $.mob.android('2.2');
@@ -92,10 +93,10 @@ $.mob.addBrowserClass();
 	// phpcode
 
 	$mobile = new MobileDetection();
-	if($mobile -> ios(6)) :
-		// do iOS 6 stuff
+	if($mobile -> ios(7)) :
+		// do iOS 7 stuff
 	else :
-		// do other stuff;
+		// do other or old iOS stuff;
 	endif;
 	
 </pre>
@@ -111,10 +112,10 @@ The Wordpress plugin automatic instantiates the class.
 	// in your theme use:
 	global $mobile;
 	
-	if($mobile -> ios(6)) :
-		// do iOS 6 stuff
+	if($mobile -> ios(7)) :
+		// do iOS 7 stuff
 	else :
-		// do other stuff;
+		// do other or old iOS stuff;
 	endif;
 	
 </pre>
@@ -123,7 +124,7 @@ The Wordpress plugin automatic instantiates the class.
 + $mobile -> iPad(); // returns boolean
 + $mobile -> iPhone(); // returns boolean
 + $mobile -> iPod(); // returns boolean
-+ $mobile -> iOS($version); // param $version = 3,4,5 or 6 (not mandatory) - returns boolean 
++ $mobile -> iOS($version); // param $version = 3,4,5,6 or 7 (not mandatory) - returns boolean 
 + $mobile -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
 + $mobile -> blackberry(); // returns boolean
 + $mobile -> windowsPhone7(); // returns boolean
@@ -141,10 +142,10 @@ The Wordpress plugin automatic instantiates the class.
 	// js script
 
 	var mobile = new MobileDetection();
-	if(mobile.ios('6')) {
-		// do iOS 6 stuff	
+	if(mobile.ios('7')) {
+		// do iOS 7 stuff	
 	} else {
-		// do other stuff;	
+		// do other or old iOS stuff;
 	}
 
 </pre>

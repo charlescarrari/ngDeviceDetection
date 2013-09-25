@@ -101,6 +101,8 @@ var MobileDetection = function() {
 					return (userAgent.indexOf('os 5') != -1);
 				case '6':
 					return (userAgent.indexOf('os 6') != -1);
+				case '7':
+					return (userAgent.indexOf('os 7') != -1);
 				default:
 					return false;
 			}
@@ -231,6 +233,9 @@ var MobileDetection = function() {
 			}
 			else if(this.ios('6')) {
 				addClassToHTMLTag('ios6');
+			}
+			else if(this.ios('7')) {
+				addClassToHTMLTag('ios7');
 			}
 		}
 		else if(this.windowsphone7()) {

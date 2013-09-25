@@ -60,6 +60,10 @@
 					return (bool) strpos($this -> _userAgent,'os 4');				
 				case 5:
 					return (bool) strpos($this -> _userAgent,'os 5');
+				case 6:
+					return (bool) strpos($this -> _userAgent,'os 6');
+				case 7:
+					return (bool) strpos($this -> _userAgent,'os 7');
 				case 0:
 				default:
 					return true;
