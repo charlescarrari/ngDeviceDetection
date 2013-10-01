@@ -101,9 +101,9 @@ $.mob.addBrowserClass();
 	
 </pre>
 
-### The Wordpress plugin
+### The WordPress plugin
 
-The Wordpress plugin automatic instantiates the class.
+The WordPress plugin automatic instantiates the class.
 
 <pre>
 	
