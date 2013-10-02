@@ -4,7 +4,7 @@
  * Version 2.2
  *
  * Author: Jos Koomen - Web by Brains
- * Twitter : @_WebByBrains
+ * Twitter : @joskoomen
  * E-mail : Jos.Koomen@WebByBrains.com
  * Further changes, questions, comments: @WebByBrains
  */
@@ -131,7 +131,7 @@ var MobileDetection = function() {
 		}
 		return a;
 	};
-		
+			
 	this.blackberry = function() {
 		return userAgent.indexOf('blackberry') != -1;
 	};
