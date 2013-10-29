@@ -29,61 +29,61 @@ jQuery.extend( {
     mob : {
     	userAgent : navigator.userAgent.toLowerCase(),
 		iphone : function() {
-			return $.mob.userAgent.indexOf('iphone') != -1;
+			return jQuery.mob.userAgent.indexOf('iphone') != -1;
 		},
 		ipod : function() {
-			return $.mob.userAgent.indexOf('ipod') != -1;
+			return jQuery.mob.userAgent.indexOf('ipod') != -1;
 		},
 		ipad : function() {
-			return $.mob.userAgent.indexOf('ipad') != -1;
+			return jQuery.mob.userAgent.indexOf('ipad') != -1;
 		},
 		htc : function() {
-			return $.mob.userAgent.indexOf('htc') != -1;
+			return jQuery.mob.userAgent.indexOf('htc') != -1;
 		},
 		sonyericsson : function() {
-			return $.mob.userAgent.indexOf('sonyericsson') != -1;
+			return jQuery.mob.userAgent.indexOf('sonyericsson') != -1;
 		},
 		acer : function() {
-			return $.mob.userAgent.indexOf('acer') != -1;
+			return jQuery.mob.userAgent.indexOf('acer') != -1;
 		},
 		LG : function() {
-			return $.mob.userAgent.indexOf('lg-') != -1;
+			return jQuery.mob.userAgent.indexOf('lg-') != -1;
 		},
 		motorola : function() {
-			return $.mob.userAgent.indexOf('motorola') != -1;
+			return jQuery.mob.userAgent.indexOf('motorola') != -1;
 		},
 		nokia : function() {
-			return $.mob.userAgent.indexOf('nokia') != -1;
+			return jQuery.mob.userAgent.indexOf('nokia') != -1;
 		},
 		samsung : function() {
-			return $.mob.userAgent.indexOf('gt-') != -1 || $.mob.userAgent.indexOf('galaxy') != -1;
+			return jQuery.mob.userAgent.indexOf('gt-') != -1 || jQuery.mob.userAgent.indexOf('galaxy') != -1;
 		},
 		iemobile9 : function() {
-			return $.mob.userAgent.indexOf('iemobile/9') != -1;
+			return jQuery.mob.userAgent.indexOf('iemobile/9') != -1;
 		},
 		operamini : function() {
-			return $.mob.userAgent.indexOf('opera mini') != -1;
+			return jQuery.mob.userAgent.indexOf('opera mini') != -1;
 		},
 		firefox : function() {
-			return $.mob.userAgent.indexOf('firefox') != -1;
+			return jQuery.mob.userAgent.indexOf('firefox') != -1;
 		},
 		webkit : function() {
-			return $.mob.userAgent.indexOf('webkit') != -1;
+			return jQuery.mob.userAgent.indexOf('webkit') != -1;
 		},
 		ios : function(version) {
-			var a = ($.mob.iphone() || $.mob.ipad() || $.mob.ipod());
+			var a = (jQuery.mob.iphone() || jQuery.mob.ipad() || jQuery.mob.ipod());
 			if(version != undefined && a) {
 				switch(version) {
 					case '3':
-						return ($.mob.userAgent.indexOf('os 3') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 3') != -1);
 					case '4':
-						return ($.mob.userAgent.indexOf('os 4') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 4') != -1);
 					case '5':
-						return ($.mob.userAgent.indexOf('os 5') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 5') != -1);
 					case '6':
-						return ($.mob.userAgent.indexOf('os 6') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 6') != -1);
 					case '7':
-						return ($.mob.userAgent.indexOf('os 7') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 7') != -1);
 					default:
 						return false;
 				}
@@ -91,22 +91,22 @@ jQuery.extend( {
 			return a;
 		},
 		windowsphone7 : function() {
-			return $.mob.userAgent.indexOf('windows phone os 7') != -1;
+			return jQuery.mob.userAgent.indexOf('windows phone os 7') != -1;
 		},
 		android : function (version) {
-			var a = $.mob.userAgent.indexOf('android') != -1;
+			var a = jQuery.mob.userAgent.indexOf('android') != -1;
 			if(version != undefined && a) {
 				switch(version) {
 					case '2.1':
-						return $.mob.userAgent.indexOf('android 2.1') != -1;
+						return jQuery.mob.userAgent.indexOf('android 2.1') != -1;
 					case '2.2':
-						return $.mob.userAgent.indexOf('android 2.2') != -1;
+						return jQuery.mob.userAgent.indexOf('android 2.2') != -1;
 					case '2.3':
-						return $.mob.userAgent.indexOf('android 2.3') != -1;
+						return jQuery.mob.userAgent.indexOf('android 2.3') != -1;
 					case '3':
-						return $.mob.userAgent.indexOf('android 3') != -1;
+						return jQuery.mob.userAgent.indexOf('android 3') != -1;
 					case '4':
-						return $.mob.userAgent.indexOf('android 4') != -1;
+						return jQuery.mob.userAgent.indexOf('android 4') != -1;
 					default:
 						return false;
 				}
@@ -114,10 +114,10 @@ jQuery.extend( {
 			return a;
 		},
 		blackberry : function() {
-			return $.mob.userAgent.indexOf('blackberry') != -1;
+			return jQuery.mob.userAgent.indexOf('blackberry') != -1;
 		},
 		anysmartphone : function() {
-		 	return /android|webos|iphone|blackberry/i.test($.mob.userAgent);
+		 	return /android|webos|iphone|blackberry/i.test(jQuery.mob.userAgent);
 		},
 		touchdevice : function() {
     		return !!('ontouchstart' in window);
@@ -132,7 +132,7 @@ jQuery.extend( {
 			return ("standalone" in window.navigator) && (window.navigator.standalone == true);
 		},
 		orientation : function() {
-			return $.mob.portrait() ? 'portrait' : 'landscape';
+			return jQuery.mob.portrait() ? 'portrait' : 'landscape';
 		},
 		landscape : function() {
 			return (window.orientation===-90)||(window.orientation===90);
@@ -141,121 +141,121 @@ jQuery.extend( {
 			return (window.orientation===0)||(window.orientation===180);
 		},
     	addDeviceClass : function() {
-			var html = $('html');
-			if($.mob.ipad()) {
+			var html = jQuery('html');
+			if(jQuery.mob.ipad()) {
 				html.addClass('ipad');
 			}
-			else if($.mob.iphone()) {
+			else if(jQuery.mob.iphone()) {
 				html.addClass('iphone');
 			}
-			else if($.mob.ipod()) {
+			else if(jQuery.mob.ipod()) {
 				html.addClass('ipod');
 			}
-			else if($.mob.blackberry()) {
+			else if(jQuery.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
-			else if($.mob.htc()) {
+			else if(jQuery.mob.htc()) {
 				html.addClass('htc');
 			}
-			else if($.mob.nokia()) {
+			else if(jQuery.mob.nokia()) {
 				html.addClass('nokia');
 			}
-			else if($.mob.samsung()) {
+			else if(jQuery.mob.samsung()) {
 				html.addClass('samsung');
 			}
-			else if($.mob.sonyericsson()) {
+			else if(jQuery.mob.sonyericsson()) {
 				html.addClass('sonyericsson');
 			}
-			else if($.mob.acer()) {
+			else if(jQuery.mob.acer()) {
 				html.addClass('acer');
 			}
-			else if($.mob.LG()) {
+			else if(jQuery.mob.LG()) {
 				html.addClass('LG');
 			}
-			else if($.mob.motorola()) {
+			else if(jQuery.mob.motorola()) {
 				html.addClass('motorola');
 			}
 		},
 		addBrowserClass : function() {
-			var html = $('html');
-			if($.mob.iemobile9()) {
+			var html = jQuery('html');
+			if(jQuery.mob.iemobile9()) {
 				html.addClass('iemobile9');
 			}
-			else if($.mob.operamini()) {
+			else if(jQuery.mob.operamini()) {
 				html.addClass('operamini');
 			}
-			else if($.mob.firefox()) {
+			else if(jQuery.mob.firefox()) {
 				html.addClass('firefox');
 			}
-			else if($.mob.webkit()) {
+			else if(jQuery.mob.webkit()) {
 				html.addClass('webkit');
 			}
 		},
 		addOSClass : function() {
-			var html = $('html');
-			if($.mob.ios()) {
+			var html = jQuery('html');
+			if(jQuery.mob.ios()) {
 				html.addClass('ios');
-				if($.mob.ios('3')) {
+				if(jQuery.mob.ios('3')) {
 					html.addClass('ios3');
 				}
-				else if($.mob.ios('4')) {
+				else if(jQuery.mob.ios('4')) {
 					html.addClass('ios4');
 				}
-				else if($.mob.ios('5')) {
+				else if(jQuery.mob.ios('5')) {
 					html.addClass('ios5');
 				}
-				else if($.mob.ios('6')) {
+				else if(jQuery.mob.ios('6')) {
 					html.addClass('ios6');
 				}
-				else if($.mob.ios('7')) {
+				else if(jQuery.mob.ios('7')) {
 					html.addClass('ios7');
 				}
 			}
-			else if($.mob.windowsphone7()) {
+			else if(jQuery.mob.windowsphone7()) {
 				html.addClass('windowsphone');
 			}
-			else if($.mob.android()) {
+			else if(jQuery.mob.android()) {
 				html.addClass('android');
-				if($.mob.android('2.1')) {
+				if(jQuery.mob.android('2.1')) {
 					html.addClass('android2-1');
 				}
-				else if($.mob.android('2.2')) {
+				else if(jQuery.mob.android('2.2')) {
 					html.addClass('android2-2');
 				}
-				else if($.mob.android('2.3')) {
+				else if(jQuery.mob.android('2.3')) {
 					html.addClass('android2-3');
 				}
-				else if($.mob.android('3')) {
+				else if(jQuery.mob.android('3')) {
 					html.addClass('android3');
 				}
-				else if($.mob.android('4')) {
+				else if(jQuery.mob.android('4')) {
 					html.addClass('android4');
 				}
 			}
-			else if($.mob.blackberry()) {
+			else if(jQuery.mob.blackberry()) {
 				html.addClass('blackberry');
 			}
 		},
 		addClasses : function() {
-			$.mob.addDeviceClass();
-			$.mob.addBrowserClass();
-			$.mob.addOSClass();
-			if($.mob.retina()) {
+			jQuery.mob.addDeviceClass();
+			jQuery.mob.addBrowserClass();
+			jQuery.mob.addOSClass();
+			if(jQuery.mob.retina()) {
 				html.addClass('retina');
 			}
-			if($.mob.standalone()) {
+			if(jQuery.mob.standalone()) {
 				html.addClass('standalone');
 			}
-			if($.mob.retina()) {
+			if(jQuery.mob.retina()) {
 				html.addClass('retina');
 			}
-			if($.mob.halfretina()) {
+			if(jQuery.mob.halfretina()) {
 				html.addClass('halfretina');
 			}
-			if($.mob.anysmartphone()) {
+			if(jQuery.mob.anysmartphone()) {
 				html.addClass('smartphone');
 			}
-			if($.mob.touchdevice()) {
+			if(jQuery.mob.touchdevice()) {
 				html.addClass('touch');
 			}
 		}
