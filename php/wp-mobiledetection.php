@@ -6,11 +6,11 @@
 
  	/*
 	Plugin Name: Mobile Detection
-	Plugin URI: http://yini.us/mobdet
+	Plugin URI: https://github.com/joskoomen/Mobile-Detection/
 	Description: A plugin with functions to detect a users mobile os, browser and or device
-	Version: 2.2
-	Author: Jos Koomen - Web by Brains 
-	Author URI: http://www.WebByBrains.com
+	Version: 2.3
+	Author: Jos Koomen 
+	Author URI: http://www.joskoomen.nl
 	License: GPLv2 or later
 	*/
 

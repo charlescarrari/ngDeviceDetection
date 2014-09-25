@@ -1,12 +1,12 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.2
+ * Version 2.3
  *
- * Author: Jos Koomen - Web by Brains
- * Twitter : @_WebByBrains
- * E-mail : Jos.Koomen@WebByBrains.com
- * Further changes, questions, comments: @WebByBrains
+ * Author: Jos Koomen
+ * Twitter : @joskoomen
+ * E-mail : ik@joskoomen.nl
+ * Further changes, questions, comments: @joskoomen
  */
 
 /*

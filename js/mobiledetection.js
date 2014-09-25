@@ -1,12 +1,12 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.2
+ * Version 2.3
  *
- * Author: Jos Koomen - Web by Brains
+ * Author: Jos Koomen
  * Twitter : @joskoomen
- * E-mail : Jos.Koomen@WebByBrains.com
- * Further changes, questions, comments: @WebByBrains
+ * E-mail : ik@joskoomen.nl
+ * Further changes, questions, comments: @joskoomen
  */
 
 /*
@@ -26,89 +26,89 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 var MobileDetection = function() {
-		
+
 	this.iphone = function() {
-		return userAgent.indexOf('iphone') != -1;
+		return userAgent.indexOf('iphone') !== -1;
 	};
 	
 	this.ipod = function() {
-		return userAgent.indexOf('ipod') != -1;
+		return userAgent.indexOf('ipod') !== -1;
 	};
 	
 	this.ipad = function() {
-		return userAgent.indexOf('ipad') != -1;
+		return userAgent.indexOf('ipad') !== -1;
 	};
 	
 	
 	this.htc = function() {
-		return userAgent.indexOf('htc') != -1;
+		return userAgent.indexOf('htc') !== -1;
 	};
 	
 	this.sonyericsson = function() {
-		return userAgent.indexOf('sonyericsson') != -1;
+		return userAgent.indexOf('sonyericsson') !== -1;
 	};
 	
 	this.acer = function() {
-		return userAgent.indexOf('acer') != -1;
+		return userAgent.indexOf('acer') !== -1;
 	};
 		
 	this.LG = function() {
-		return userAgent.indexOf('lg-') != -1;
+		return userAgent.indexOf('lg-') !== -1;
 	};
 		
 	this.motorola = function() {
-		return userAgent.indexOf('motorola') != -1;
+		return userAgent.indexOf('motorola') !== -1;
 	};
 		
 	this.nokia = function() {
-		return userAgent.indexOf('nokia') != -1;
+		return userAgent.indexOf('nokia') !== -1;
 	};
 		
 	this.samsung = function() {
-		return userAgent.indexOf('gt-') != -1 || userAgent.indexOf('galaxy') != -1;
+		return userAgent.indexOf('gt-') !== -1 || userAgent.indexOf('galaxy') !== -1;
 	};
 		
 	this.iemobile9 = function() {
-		return userAgent.indexOf('iemobile/9') != -1;
+		return userAgent.indexOf('iemobile/9') !== -1;
 	};
 	
 	this.iemobile10 = function() {
-		return userAgent.indexOf('iemobile/10') != -1;
+		return userAgent.indexOf('iemobile/10') !== -1;
 	};
 		
 	this.operamini = function() {
-		return userAgent.indexOf('opera mini') != -1;
+		return userAgent.indexOf('opera mini') !== -1;
 	};
 		
 	this.firefox = function() {
-		return userAgent.indexOf('firefox') != -1;
+		return userAgent.indexOf('firefox') !== -1;
 	};
 		
 	this.webkit = function() {
-		return userAgent.indexOf('webkit') != -1;
+		return userAgent.indexOf('webkit') !== -1;
 	};
 		
 	this.windowsphone7 = function() {
-		return userAgent.indexOf('windows phone os 7') != -1;
+		return userAgent.indexOf('windows phone os 7') !== -1;
 	};
 	
 	this.windowsphone8 = function() {
-		return userAgent.indexOf('windows phone 8') != -1;
+		return userAgent.indexOf('windows phone 8') !== -1;
 	};
 	
 	this.ios = function(version) {
 		var a = (this.iphone() || this.ipad() || this.ipod());
 		
-		if(version != undefined && a) {
+		if(version !== undefined && a) {
 			switch(version) {
 				case '5':
-					return (userAgent.indexOf('os 5') != -1);
+					return (userAgent.indexOf('os 5') !== -1);
 				case '6':
-					return (userAgent.indexOf('os 6') != -1);
+					return (userAgent.indexOf('os 6') !== -1);
 				case '7':
-					return (userAgent.indexOf('os 7') != -1);
+					return (userAgent.indexOf('os 7') !== -1);
 				case '8':
-					return (userAgent.indexOf('os 8') != -1);
+					return (userAgent.indexOf('os 8') !== -1);
 				default:
 					return false;
 			}
@@ -117,16 +117,16 @@ var MobileDetection = function() {
 	};
 
 	this.android = function (version) {
-		var a = userAgent.indexOf('android') != -1;
+		var a = userAgent.indexOf('android') !== -1;
 		
-		if(version != undefined && a) {
+		if(version !== undefined && a) {
 			switch(version) {
 				case '2':
-				return userAgent.indexOf('android 2') != -1;
+				return userAgent.indexOf('android 2') !== -1;
 				case '3':
-				return userAgent.indexOf('android 3') != -1;
+				return userAgent.indexOf('android 3') !== -1;
 				case '4':
-				return userAgent.indexOf('android 4') != -1;
+				return userAgent.indexOf('android 4') !== -1;
 				default:
 					return false;
 			}
@@ -135,7 +135,7 @@ var MobileDetection = function() {
 	};
 			
 	this.blackberry = function() {
-		return userAgent.indexOf('blackberry') != -1;
+		return userAgent.indexOf('blackberry') !== -1;
 	};
 		
 	this.halfretina = function() {
@@ -143,11 +143,11 @@ var MobileDetection = function() {
 	};
 	
 	this.retina = function() {
-		return window.devicePixelRatio == 2;
+		return window.devicePixelRatio === 2;
 	};
 		
 	this.standalone = function() {
-		return ("standalone" in window.navigator) && (window.navigator.standalone == true);
+		return ("standalone" in window.navigator) && (window.navigator.standalone === true);
 	};
 		
 	this.orientation = function() {
@@ -284,8 +284,7 @@ var MobileDetection = function() {
 		if(this.standalone()) {
 			addClassToHTMLTag('standalone');
 		}
-	}
-	
+	};
 	
 	var userAgent = navigator.userAgent.toLowerCase();
 	
@@ -293,4 +292,4 @@ var MobileDetection = function() {
 		var html = document.getElementsByTagName('html')[0];
 		html.className = html.className + ' ' + cName;
 	};
-}
+};
