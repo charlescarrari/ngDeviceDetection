@@ -71,6 +71,10 @@ var MobileDetection = function() {
 	this.iemobile9 = function() {
 		return userAgent.indexOf('iemobile/9') != -1;
 	};
+	
+	this.iemobile10 = function() {
+		return userAgent.indexOf('iemobile/10') != -1;
+	};
 		
 	this.operamini = function() {
 		return userAgent.indexOf('opera mini') != -1;
@@ -88,21 +92,23 @@ var MobileDetection = function() {
 		return userAgent.indexOf('windows phone os 7') != -1;
 	};
 	
+	this.windowsphone8 = function() {
+		return userAgent.indexOf('windows phone 8') != -1;
+	};
+	
 	this.ios = function(version) {
 		var a = (this.iphone() || this.ipad() || this.ipod());
 		
 		if(version != undefined && a) {
 			switch(version) {
-				case '3':
-					return (userAgent.indexOf('os 3') != -1);
-				case '4':
-					return (userAgent.indexOf('os 4') != -1);
 				case '5':
 					return (userAgent.indexOf('os 5') != -1);
 				case '6':
 					return (userAgent.indexOf('os 6') != -1);
 				case '7':
 					return (userAgent.indexOf('os 7') != -1);
+				case '8':
+					return (userAgent.indexOf('os 8') != -1);
 				default:
 					return false;
 			}
@@ -115,12 +121,8 @@ var MobileDetection = function() {
 		
 		if(version != undefined && a) {
 			switch(version) {
-				case '2.1':
-				return userAgent.indexOf('android 2.1') != -1;
-				case '2.2':
-				return userAgent.indexOf('android 2.2') != -1;
-				case '2.3':
-				return userAgent.indexOf('android 2.3') != -1;
+				case '2':
+				return userAgent.indexOf('android 2') != -1;
 				case '3':
 				return userAgent.indexOf('android 3') != -1;
 				case '4':
@@ -208,6 +210,9 @@ var MobileDetection = function() {
 		if(this.iemobile9()) {
 			addClassToHTMLTag('iemobile9');
 		}
+		if(this.iemobile10()) {
+			addClassToHTMLTag('iemobile10');
+		}
 		else if(this.operamini()) {
 			addClassToHTMLTag('operamini');
 		}
@@ -222,13 +227,7 @@ var MobileDetection = function() {
 	this.addOSClass = function() {
 		if(this.ios()) {
 			addClassToHTMLTag('ios');
-			if(this.ios('3')) {
-				addClassToHTMLTag('ios3');
-			}
-			else if(this.ios('4')) {
-				addClassToHTMLTag('ios4');
-			}
-			else if(this.ios('5')) {
+			if(this.ios('5')) {
 				addClassToHTMLTag('ios5');
 			}
 			else if(this.ios('6')) {
@@ -237,20 +236,22 @@ var MobileDetection = function() {
 			else if(this.ios('7')) {
 				addClassToHTMLTag('ios7');
 			}
+			else if(this.ios('8')) {
+				addClassToHTMLTag('ios8');
+			}
 		}
 		else if(this.windowsphone7()) {
 			addClassToHTMLTag('windowsphone');
+			addClassToHTMLTag('windowsphone7');
+		}
+		else if(this.windowsphone8()) {
+			addClassToHTMLTag('windowsphone');
+			addClassToHTMLTag('windowsphone8');
 		}
 		else if(this.android()) {
 			addClassToHTMLTag('android');
-			if(this.android('2.1')) {
-				addClassToHTMLTag('android2-1');
-			}
-			else if(this.android('2.2')) {
-				addClassToHTMLTag('android2-2');
-			}
-			else if(this.android('2.3')) {
-				addClassToHTMLTag('android2-3');
+			if(this.android('2')) {
+				addClassToHTMLTag('android2');
 			}
 			else if(this.android('3')) {
 				addClassToHTMLTag('android3');

@@ -21,7 +21,7 @@
 		// initialize the Class
 		$mobile = new MobileDetection();
 		
-		echo '<p>iOS 4: '; var_dump($mobile -> iOS('4')); echo '</p>';
+		echo '<p>iOS 7: '; var_dump($mobile -> iOS('7')); echo '</p>';
 		echo '<p>Retina: '; var_dump($mobile -> retina()); echo '</p>';
 		
 		$mobile -> simulateRetina();

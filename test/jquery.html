@@ -27,7 +27,7 @@
 			console.log( $('html').attr('class') );
 			
 			// test here some other methods like
-			console.log( 'iOS 5: ' + $.mob.ios('5') );
+			console.log( 'iOS 6: ' + $.mob.ios('6') );
 			console.log( 'retina: ' + $.mob.retina() );
 			console.log( 'current orientation: ' + $.mob.orientation() );
 			
@@ -35,6 +35,8 @@
 			
 			if($.mob.standalone()) 
 				$('body').append("You're in standalone mode");
+				
+				alert('check your console!');
 		});
 		
 	</script>

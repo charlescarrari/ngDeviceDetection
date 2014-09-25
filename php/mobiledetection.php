@@ -54,16 +54,14 @@
 			if(!$is_iOS) return false;
 					
 			switch($version) {
-				case 3:
-					return (bool) strpos($this -> _userAgent,'os 3');
-				case 4:
-					return (bool) strpos($this -> _userAgent,'os 4');				
 				case 5:
 					return (bool) strpos($this -> _userAgent,'os 5');
 				case 6:
 					return (bool) strpos($this -> _userAgent,'os 6');
 				case 7:
 					return (bool) strpos($this -> _userAgent,'os 7');
+				case 8:
+					return (bool) strpos($this -> _userAgent,'os 8');
 				case 0:
 				default:
 					return true;
@@ -78,12 +76,8 @@
 			if(!$isAndroid) return false;
 
 			switch($version) {
-				case 2.1:
-					return (bool) strpos($this -> _userAgent,'android 2.1');
-				case 2.2:
-					return (bool) strpos($this -> _userAgent,'android 2.2');				
-				case 2.3:
-					return (bool) strpos($this -> _userAgent,'android 2.3');
+				case 2:
+					return (bool) strpos($this -> _userAgent,'android 2');
 				case 3:
 					return (bool) strpos($this -> _userAgent,'android 3');
 				case 4:
@@ -105,8 +99,16 @@
 			return (bool) strpos($this -> _userAgent,'windows phone os 7');
 		}
 		
+		public function windowsPhone8() {
+			return (bool) strpos($this -> _userAgent,'windows phone 8');
+		}
+		
 		public function ieMobile9() {
 			return (bool) strpos($this -> _userAgent,'iemobile/9');
+		}
+		
+		public function ieMobile10() {
+			return (bool) strpos($this -> _userAgent,'iemobile/10');
 		}
 		
 		public function operaMini() {

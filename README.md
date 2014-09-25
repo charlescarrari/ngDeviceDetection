@@ -40,18 +40,16 @@ You can detect several Operating systems. All detections returns a boolean. All 
 You can detect the following Operating systems:
 
 + iOs (all)			: $.mob.ios();
-+ iOs 3				: $.mob.ios('3');
-+ iOs 4				: $.mob.ios('4');
 + iOs 5				: $.mob.ios('5');
 + iOs 6				: $.mob.ios('6');
 + iOs 7				: $.mob.ios('7');
++ iOs 8				: $.mob.ios('8');
 + Android (all)		: $.mob.android();
-+ Android 2.1		: $.mob.android('2.1');
-+ Android 2.2		: $.mob.android('2.2');
-+ Android 2.3		: $.mob.android('2.3');
++ Android 2         : $.mob.android('2.1');
 + Android 3			: $.mob.android('3');
 + Android 4			: $.mob.android('4');
 + Windows Phone 7	: $.mob.windowsphone7();
++ Windows Phone 8	: $.mob.windowsphone8();
 
 ### Detect your mobile browser
 You can detect several Mobile browsers. All detections returns a boolean. All functions are added to the 'mob' object.
@@ -61,6 +59,8 @@ You can detect the following Browsers:
 + Webkit			: $.mob.webkit();
 + Firefox			: $.mob.firefox();
 + IE Mobile			: $.mob.iemobile();
++ IE Mobile	9		: $.mob.iemobile9();
++ IE Mobile	10		: $.mob.iemobile10();
 
 ### Detect basics
 You can detect almost everything but if you're only interested in the function to check if a user uses a touch device or a smartphone you can use this:
@@ -124,11 +124,13 @@ The WordPress plugin automatic instantiates the class.
 + $mobile -> iPad(); // returns boolean
 + $mobile -> iPhone(); // returns boolean
 + $mobile -> iPod(); // returns boolean
-+ $mobile -> iOS($version); // param $version = 3,4,5,6 or 7 (not mandatory) - returns boolean 
-+ $mobile -> android($version); // param $version = 2.1, 2.2, 2.3, 3 or 4 (not mandatory) - returns boolean
++ $mobile -> iOS($version); // param $version = 5,6,7 or 8 (not mandatory) - returns boolean 
++ $mobile -> android($version); // param $version = 2, 3 or 4 (not mandatory) - returns boolean
 + $mobile -> blackberry(); // returns boolean
 + $mobile -> windowsPhone7(); // returns boolean
++ $mobile -> windowsPhone8(); // returns boolean
 + $mobile -> ieMobile9(); // returns boolean
++ $mobile -> ieMobile10(); // returns boolean
 + $mobile -> operaMini(); // returns boolean
 + $mobile -> firefox(); // returns boolean
 + $mobile -> webkit(); // returns boolean

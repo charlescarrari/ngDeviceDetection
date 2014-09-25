@@ -29,61 +29,65 @@ jQuery.extend( {
     mob : {
     	userAgent : navigator.userAgent.toLowerCase(),
 		iphone : function() {
-			return jQuery.mob.userAgent.indexOf('iphone') != -1;
+			return jQuery.mob.userAgent.indexOf('iphone') !== -1;
 		},
 		ipod : function() {
-			return jQuery.mob.userAgent.indexOf('ipod') != -1;
+			return jQuery.mob.userAgent.indexOf('ipod') !== -1;
 		},
 		ipad : function() {
-			return jQuery.mob.userAgent.indexOf('ipad') != -1;
+			return jQuery.mob.userAgent.indexOf('ipad') !== -1;
 		},
 		htc : function() {
-			return jQuery.mob.userAgent.indexOf('htc') != -1;
+			return jQuery.mob.userAgent.indexOf('htc') !== -1;
 		},
 		sonyericsson : function() {
-			return jQuery.mob.userAgent.indexOf('sonyericsson') != -1;
+			return jQuery.mob.userAgent.indexOf('sonyericsson') !== -1;
 		},
 		acer : function() {
-			return jQuery.mob.userAgent.indexOf('acer') != -1;
+			return jQuery.mob.userAgent.indexOf('acer') !== -1;
 		},
 		LG : function() {
-			return jQuery.mob.userAgent.indexOf('lg-') != -1;
+			return jQuery.mob.userAgent.indexOf('lg-') !== -1;
 		},
 		motorola : function() {
-			return jQuery.mob.userAgent.indexOf('motorola') != -1;
+			return jQuery.mob.userAgent.indexOf('motorola') !== -1;
 		},
 		nokia : function() {
-			return jQuery.mob.userAgent.indexOf('nokia') != -1;
+			return jQuery.mob.userAgent.indexOf('nokia') !== -1;
 		},
 		samsung : function() {
-			return jQuery.mob.userAgent.indexOf('gt-') != -1 || jQuery.mob.userAgent.indexOf('galaxy') != -1;
+			return jQuery.mob.userAgent.indexOf('gt-') !== -1 || jQuery.mob.userAgent.indexOf('galaxy') !== -1;
 		},
 		iemobile9 : function() {
-			return jQuery.mob.userAgent.indexOf('iemobile/9') != -1;
+			return jQuery.mob.userAgent.indexOf('iemobile/9') !== -1;
+		},
+		iemobile10 : function() {
+			return jQuery.mob.userAgent.indexOf('iemobile/10') !== -1;
+		},
+		iemobile : function() {
+			return jQuery.mob.userAgent.indexOf('iemobile') !== -1;
 		},
 		operamini : function() {
-			return jQuery.mob.userAgent.indexOf('opera mini') != -1;
+			return jQuery.mob.userAgent.indexOf('opera mini') !== -1;
 		},
 		firefox : function() {
-			return jQuery.mob.userAgent.indexOf('firefox') != -1;
+			return jQuery.mob.userAgent.indexOf('firefox') !== -1;
 		},
 		webkit : function() {
-			return jQuery.mob.userAgent.indexOf('webkit') != -1;
+			return jQuery.mob.userAgent.indexOf('webkit') !== -1;
 		},
 		ios : function(version) {
 			var a = (jQuery.mob.iphone() || jQuery.mob.ipad() || jQuery.mob.ipod());
-			if(version != undefined && a) {
+			if(version !== undefined && a) {
 				switch(version) {
-					case '3':
-						return (jQuery.mob.userAgent.indexOf('os 3') != -1);
-					case '4':
-						return (jQuery.mob.userAgent.indexOf('os 4') != -1);
 					case '5':
-						return (jQuery.mob.userAgent.indexOf('os 5') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 5') !== -1);
 					case '6':
-						return (jQuery.mob.userAgent.indexOf('os 6') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 6') !== -1);
 					case '7':
-						return (jQuery.mob.userAgent.indexOf('os 7') != -1);
+						return (jQuery.mob.userAgent.indexOf('os 7') !== -1);
+					case '7':
+						return (jQuery.mob.userAgent.indexOf('os 8') !== -1);
 					default:
 						return false;
 				}
@@ -91,22 +95,21 @@ jQuery.extend( {
 			return a;
 		},
 		windowsphone7 : function() {
-			return jQuery.mob.userAgent.indexOf('windows phone os 7') != -1;
+			return jQuery.mob.userAgent.indexOf('windows phone os 7') !== -1;
+		},
+		windowsphone8 : function() {
+			return jQuery.mob.userAgent.indexOf('windows phone 8') !== -1;
 		},
 		android : function (version) {
-			var a = jQuery.mob.userAgent.indexOf('android') != -1;
-			if(version != undefined && a) {
+			var a = jQuery.mob.userAgent.indexOf('android') !== -1;
+			if(version !== undefined && a) {
 				switch(version) {
-					case '2.1':
-						return jQuery.mob.userAgent.indexOf('android 2.1') != -1;
-					case '2.2':
-						return jQuery.mob.userAgent.indexOf('android 2.2') != -1;
-					case '2.3':
-						return jQuery.mob.userAgent.indexOf('android 2.3') != -1;
+					case '2':
+						return jQuery.mob.userAgent.indexOf('android 2') !== -1;
 					case '3':
-						return jQuery.mob.userAgent.indexOf('android 3') != -1;
+						return jQuery.mob.userAgent.indexOf('android 3') !== -1;
 					case '4':
-						return jQuery.mob.userAgent.indexOf('android 4') != -1;
+						return jQuery.mob.userAgent.indexOf('android 4') !== -1;
 					default:
 						return false;
 				}
@@ -114,7 +117,7 @@ jQuery.extend( {
 			return a;
 		},
 		blackberry : function() {
-			return jQuery.mob.userAgent.indexOf('blackberry') != -1;
+			return jQuery.mob.userAgent.indexOf('blackberry') !== -1;
 		},
 		anysmartphone : function() {
 		 	return /android|webos|iphone|blackberry/i.test(jQuery.mob.userAgent);
@@ -126,10 +129,10 @@ jQuery.extend( {
 			return window.devicePixelRatio > 1 && window.devicePixelRatio < 2;
 		},
 		retina : function() {
-			return window.devicePixelRatio == 2;
+			return window.devicePixelRatio === 2;
 		},
 		standalone : function() {
-			return ("standalone" in window.navigator) && (window.navigator.standalone == true);
+			return ("standalone" in window.navigator) && (window.navigator.standalone === true);
 		},
 		orientation : function() {
 			return jQuery.mob.portrait() ? 'portrait' : 'landscape';
@@ -179,7 +182,12 @@ jQuery.extend( {
 		addBrowserClass : function() {
 			var html = jQuery('html');
 			if(jQuery.mob.iemobile9()) {
+				html.addClass('iemobile');
 				html.addClass('iemobile9');
+			}
+			if(jQuery.mob.iemobile10()) {
+				html.addClass('iemobile');
+				html.addClass('iemobile10');
 			}
 			else if(jQuery.mob.operamini()) {
 				html.addClass('operamini');
@@ -195,13 +203,7 @@ jQuery.extend( {
 			var html = jQuery('html');
 			if(jQuery.mob.ios()) {
 				html.addClass('ios');
-				if(jQuery.mob.ios('3')) {
-					html.addClass('ios3');
-				}
-				else if(jQuery.mob.ios('4')) {
-					html.addClass('ios4');
-				}
-				else if(jQuery.mob.ios('5')) {
+				if(jQuery.mob.ios('5')) {
 					html.addClass('ios5');
 				}
 				else if(jQuery.mob.ios('6')) {
@@ -210,20 +212,22 @@ jQuery.extend( {
 				else if(jQuery.mob.ios('7')) {
 					html.addClass('ios7');
 				}
+				else if(jQuery.mob.ios('8')) {
+					html.addClass('ios8');
+				}
 			}
 			else if(jQuery.mob.windowsphone7()) {
 				html.addClass('windowsphone');
+				html.addClass('windowsphone7');
+			}
+			else if(jQuery.mob.windowsphone8()) {
+				html.addClass('windowsphone');
+				html.addClass('windowsphone8');
 			}
 			else if(jQuery.mob.android()) {
 				html.addClass('android');
-				if(jQuery.mob.android('2.1')) {
-					html.addClass('android2-1');
-				}
-				else if(jQuery.mob.android('2.2')) {
-					html.addClass('android2-2');
-				}
-				else if(jQuery.mob.android('2.3')) {
-					html.addClass('android2-3');
+				if(jQuery.mob.android('2')) {
+					html.addClass('android2');
 				}
 				else if(jQuery.mob.android('3')) {
 					html.addClass('android3');
@@ -237,6 +241,8 @@ jQuery.extend( {
 			}
 		},
 		addClasses : function() {
+			var html = jQuery('html');
+			
 			jQuery.mob.addDeviceClass();
 			jQuery.mob.addBrowserClass();
 			jQuery.mob.addOSClass();
