@@ -1,0 +1,21 @@
+{
+  "name": "Javascript Mobile Detection",
+  "version": "2.5.0",
+  "homepage": "https://github.com/joskoomen/Mobile-Detection",
+  "authors": ["Jos Koomen <ik@JosKoomen.nl>"],
+  "description": "Detect Browsers, Devices and Screen  DPI. Add classes to HTML tag to make style separations.",
+  "main": "mobiledetection.js",
+  "keywords": [
+    "Mobile",
+    "Javascript",
+    "jQuery",
+    "Detect",
+    "Multi",
+    "Platform",
+    "Android",
+    "iOS",
+    "Windows",
+    "Touch"
+  ],
+  "license": "GNU"
+}

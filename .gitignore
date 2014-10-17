@@ -1,4 +1,4 @@
-
 .project
-
 *.codekit
+gulpfile.js
+node_modules/
