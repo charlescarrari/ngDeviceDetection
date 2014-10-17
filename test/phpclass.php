@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>RocketPower Mobile Detection Test</title>
+	<title>Jos Koomen Mobile Detection Test</title>
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -21,7 +21,7 @@
 		// initialize the Class
 		$mobile = new MobileDetection();
 		
-		echo '<p>iOS 7: '; var_dump($mobile -> iOS('7')); echo '</p>';
+		echo '<p>iOS 8: '; var_dump($mobile -> iOS('8')); echo '</p>';
 		echo '<p>Retina: '; var_dump($mobile -> retina()); echo '</p>';
 		
 		$mobile -> simulateRetina();

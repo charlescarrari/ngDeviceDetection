@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 2.3
+	 * Version 2.5
 	 *
 	 * Author: Jos Koomen
 	 * Twitter : @joskoomen
