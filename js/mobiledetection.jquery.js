@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.5.1
+ * Version 2.6
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -58,14 +58,23 @@ jQuery.extend( {
 		samsung : function() {
 			return jQuery.mob.userAgent.indexOf('gt-') !== -1 || jQuery.mob.userAgent.indexOf('galaxy') !== -1;
 		},
+		lenovo : function() {
+			return jQuery.mob.userAgent.indexOf('lenovo') !== -1;
+		}, 
+		huawei : function() {
+			return jQuery.mob.userAgent.indexOf('huawei') !== -1 || jQuery.mob.userAgent.indexOf('ascend') !== -1;
+		}, 
+		iemobile : function() {
+			return jQuery.mob.userAgent.indexOf('iemobile') !== -1;
+		},
 		iemobile9 : function() {
 			return jQuery.mob.userAgent.indexOf('iemobile/9') !== -1;
 		},
 		iemobile10 : function() {
 			return jQuery.mob.userAgent.indexOf('iemobile/10') !== -1;
 		},
-		iemobile : function() {
-			return jQuery.mob.userAgent.indexOf('iemobile') !== -1;
+		iemobile11 : function() {
+			return jQuery.mob.userAgent.indexOf('iemobile/11') !== -1;
 		},
 		operamini : function() {
 			return jQuery.mob.userAgent.indexOf('opera mini') !== -1;
@@ -168,6 +177,12 @@ jQuery.extend( {
 			else if(jQuery.mob.samsung()) {
 				html.addClass('samsung');
 			}
+			else if(jQuery.mob.lenovo()) {
+				html.addClass('lenovo');
+			}
+			else if(jQuery.mob.huawei()) {
+				html.addClass('huawei');
+			}
 			else if(jQuery.mob.sonyericsson()) {
 				html.addClass('sonyericsson');
 			}
@@ -187,9 +202,13 @@ jQuery.extend( {
 				html.addClass('iemobile');
 				html.addClass('iemobile9');
 			}
-			if(jQuery.mob.iemobile10()) {
+			else if(jQuery.mob.iemobile10()) {
 				html.addClass('iemobile');
 				html.addClass('iemobile10');
+			}
+			else if(jQuery.mob.iemobile11()) {
+				html.addClass('iemobile');
+				html.addClass('iemobile11');
 			}
 			else if(jQuery.mob.operamini()) {
 				html.addClass('operamini');

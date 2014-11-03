@@ -34,6 +34,8 @@ You can detect the following devices:
 + SonyEricsson		: $.mob.sonyericsson();
 + Motorola			: $.mob.motorola();
 + LG				: $.mob.LG();
++ Lenovo			: $.mob.lenovo();
++ Huawei			: $.mob.huawei();
 
 ### Detect your OS
 You can detect several Operating systems. All detections returns a boolean. All functions are added to the 'mob' object. Android and iOS subversions are no longer seperate functions.
@@ -48,6 +50,7 @@ You can detect the following Operating systems:
 + Android 2         : $.mob.android('2.1');
 + Android 3			: $.mob.android('3');
 + Android 4			: $.mob.android('4');
++ Android 4			: $.mob.android('5');
 + Windows Phone 7	: $.mob.windowsphone7();
 + Windows Phone 8	: $.mob.windowsphone8();
 
@@ -61,6 +64,7 @@ You can detect the following Browsers:
 + IE Mobile			: $.mob.iemobile();
 + IE Mobile	9		: $.mob.iemobile9();
 + IE Mobile	10		: $.mob.iemobile10();
++ IE Mobile	11		: $.mob.iemobile11();
 
 ### Detect basics
 You can detect almost everything but if you're only interested in the function to check if a user uses a touch device or a smartphone you can use this:
@@ -131,6 +135,7 @@ The WordPress plugin automatic instantiates the class.
 + $mobile -> windowsPhone8(); // returns boolean
 + $mobile -> ieMobile9(); // returns boolean
 + $mobile -> ieMobile10(); // returns boolean
++ $mobile -> ieMobile11(); // returns boolean
 + $mobile -> operaMini(); // returns boolean
 + $mobile -> firefox(); // returns boolean
 + $mobile -> webkit(); // returns boolean

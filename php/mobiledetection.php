@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 2.5.1
+	 * Version 2.6
 	 *
 	 * Author: Jos Koomen
 	 * Twitter : @joskoomen
@@ -111,6 +111,10 @@
 		
 		public function ieMobile10() {
 			return (bool) strpos($this -> _userAgent,'iemobile/10');
+		}
+
+		public function ieMobile11() {
+			return (bool) strpos($this -> _userAgent,'iemobile/11');
 		}
 		
 		public function operaMini() {
