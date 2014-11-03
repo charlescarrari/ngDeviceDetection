@@ -8,7 +8,7 @@
 	Plugin Name: Mobile Detection
 	Plugin URI: https://github.com/joskoomen/Mobile-Detection/
 	Description: A plugin with functions to detect a users mobile os, browser and or device
-	Version: 2.5
+	Version: 2.5.1
 	Author: Jos Koomen 
 	Author URI: http://www.joskoomen.nl
 	License: GPLv2 or later

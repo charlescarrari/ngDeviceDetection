@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 2.5
+	 * Version 2.5.1
 	 *
 	 * Author: Jos Koomen
 	 * Twitter : @joskoomen
@@ -82,6 +82,8 @@
 					return (bool) strpos($this -> _userAgent,'android 3');
 				case 4:
 					return (bool) strpos($this -> _userAgent,'android 4');
+				case 5:
+					return (bool) strpos($this -> _userAgent,'android 5');
 				case 0;
 				default:
 					return true;

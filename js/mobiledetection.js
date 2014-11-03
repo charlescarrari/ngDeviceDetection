@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.5
+ * Version 2.5.1
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -127,6 +127,8 @@ var MobileDetection = function() {
 				return userAgent.indexOf('android 3') !== -1;
 				case '4':
 				return userAgent.indexOf('android 4') !== -1;
+				case '5':
+				return userAgent.indexOf('android 5') !== -1;
 				default:
 					return false;
 			}
@@ -258,6 +260,9 @@ var MobileDetection = function() {
 			}
 			else if(this.android('4')) {
 				addClassToHTMLTag('android4');
+			}
+			else if(this.android('5')) {
+				addClassToHTMLTag('android5');
 			}
 		}
 		else if(this.blackberry()) {

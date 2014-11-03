@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.5
+ * Version 2.5.1
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -110,6 +110,8 @@ jQuery.extend( {
 						return jQuery.mob.userAgent.indexOf('android 3') !== -1;
 					case '4':
 						return jQuery.mob.userAgent.indexOf('android 4') !== -1;
+					case '5':
+						return jQuery.mob.userAgent.indexOf('android 5') !== -1;
 					default:
 						return false;
 				}
@@ -234,6 +236,9 @@ jQuery.extend( {
 				}
 				else if(jQuery.mob.android('4')) {
 					html.addClass('android4');
+				}
+				else if(jQuery.mob.android('5')) {
+					html.addClass('android5');
 				}
 			}
 			else if(jQuery.mob.blackberry()) {
