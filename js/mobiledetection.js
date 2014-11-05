@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.6
+ * Version 2.7
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -39,13 +39,16 @@ var MobileDetection = function() {
 		return userAgent.indexOf('ipad') !== -1;
 	};
 	
+	this.nexus = function() {
+		return userAgent.indexOf('nexus') !== -1;
+	};
 	
 	this.htc = function() {
 		return userAgent.indexOf('htc') !== -1;
 	};
 	
-	this.sonyericsson = function() {
-		return userAgent.indexOf('sonyericsson') !== -1;
+	this.sony = function() {
+		return userAgent.indexOf('sony') !== -1;
 	};
 	
 	this.acer = function() {
@@ -65,7 +68,7 @@ var MobileDetection = function() {
 	};
 		
 	this.samsung = function() {
-		return userAgent.indexOf('gt-') !== -1 || userAgent.indexOf('galaxy') !== -1;
+		return userAgent.indexOf('gt-') !== -1 || userAgent.indexOf('galaxy') !== -1 || userAgent.indexOf('samsung') !== -1;
 	};
 		
 	this.lenovo = function() {
@@ -163,6 +166,10 @@ var MobileDetection = function() {
 	this.retina = function() {
 		return window.devicePixelRatio === 2;
 	};
+
+	this.retinaHD = function() {
+		return window.devicePixelRatio === 3;
+	};
 		
 	this.standalone = function() {
 		return ("standalone" in window.navigator) && (window.navigator.standalone === true);
@@ -201,6 +208,9 @@ var MobileDetection = function() {
 		else if(this.blackberry()) {
 			addClassToHTMLTag('blackberry');
 		}
+		else if(this.nexus()) {
+			addClassToHTMLTag('nexus');
+		}
 		else if(this.htc()) {
 			addClassToHTMLTag('htc');
 		}
@@ -216,8 +226,8 @@ var MobileDetection = function() {
 		else if(this.huawei()) {
 			addClassToHTMLTag('huawei');
 		}
-		else if(this.sonyericsson()) {
-			addClassToHTMLTag('sonyericsson');
+		else if(this.sony()) {
+			addClassToHTMLTag('sony');
 		}
 		else if(this.acer()) {
 			addClassToHTMLTag('acer');

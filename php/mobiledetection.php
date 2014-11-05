@@ -3,7 +3,7 @@
 	/*
 	 * Detect mobile browsers and devices
 	 *
-	 * Version 2.6
+	 * Version 2.7
 	 *
 	 * Author: Jos Koomen
 	 * Twitter : @joskoomen
@@ -129,6 +129,22 @@
 			return (bool) strpos($this -> _userAgent,'webkit');
 		}
 		
+		public function retinaHD() {
+			if($this->_simulateRetinaHD) return true;
+			
+			if(isset($_COOKIE["devicePixelRatio"])) :
+	        	$devicePixelRatio = $_COOKIE["devicePixelRatio"];
+		        return ($devicePixelRatio == 3);
+			else :
+		    	echo '<script>';
+		        echo 'var dpr_cookie = "devicePixelRatio="+window.devicePixelRatio+";"+dpr_cookie;';
+		        echo 'document.cookie = dpr_cookie;';
+		        echo 'location = "'. $_SERVER['PHP_SELF'] . '";';
+		    	echo '</script>';
+				
+		    endif;
+		}
+
 		public function retina() {
 			if($this->_simulateRetina) return true;
 			

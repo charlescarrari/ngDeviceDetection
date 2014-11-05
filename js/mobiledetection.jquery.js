@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.6
+ * Version 2.7
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -37,11 +37,14 @@ jQuery.extend( {
 		ipad : function() {
 			return jQuery.mob.userAgent.indexOf('ipad') !== -1;
 		},
+		nexus : function() {
+			return jQuery.mob.userAgent.indexOf('nexus') !== -1;
+		},
 		htc : function() {
 			return jQuery.mob.userAgent.indexOf('htc') !== -1;
 		},
-		sonyericsson : function() {
-			return jQuery.mob.userAgent.indexOf('sonyericsson') !== -1;
+		sony : function() {
+			return jQuery.mob.userAgent.indexOf('sony') !== -1;
 		},
 		acer : function() {
 			return jQuery.mob.userAgent.indexOf('acer') !== -1;
@@ -56,7 +59,7 @@ jQuery.extend( {
 			return jQuery.mob.userAgent.indexOf('nokia') !== -1;
 		},
 		samsung : function() {
-			return jQuery.mob.userAgent.indexOf('gt-') !== -1 || jQuery.mob.userAgent.indexOf('galaxy') !== -1;
+			return jQuery.mob.userAgent.indexOf('gt-') !== -1 || jQuery.mob.userAgent.indexOf('galaxy') !== -1 || jQuery.mob.userAgent.indexOf('samsung') !== -1;
 		},
 		lenovo : function() {
 			return jQuery.mob.userAgent.indexOf('lenovo') !== -1;
@@ -142,6 +145,9 @@ jQuery.extend( {
 		retina : function() {
 			return window.devicePixelRatio === 2;
 		},
+		retinaHD : function() {
+			return window.devicePixelRatio === 3;
+		},
 		standalone : function() {
 			return ("standalone" in window.navigator) && (window.navigator.standalone === true);
 		},
@@ -171,6 +177,9 @@ jQuery.extend( {
 			else if(jQuery.mob.htc()) {
 				html.addClass('htc');
 			}
+			else if(jQuery.mob.nexus()) {
+				html.addClass('nexus');
+			}
 			else if(jQuery.mob.nokia()) {
 				html.addClass('nokia');
 			}
@@ -183,8 +192,8 @@ jQuery.extend( {
 			else if(jQuery.mob.huawei()) {
 				html.addClass('huawei');
 			}
-			else if(jQuery.mob.sonyericsson()) {
-				html.addClass('sonyericsson');
+			else if(jQuery.mob.sony()) {
+				html.addClass('sony');
 			}
 			else if(jQuery.mob.acer()) {
 				html.addClass('acer');

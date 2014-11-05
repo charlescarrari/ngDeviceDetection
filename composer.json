@@ -1,6 +1,6 @@
 {
     "name": "joskoomen/mobile-detection",
-    "version": "2.6.0",
+    "version": "2.7.0",
 	"description": "Detect Browsers, Devices and Screen  DPI. Add classes to HTML tag to make style separations.",
 	"require": {
 		"php": ">=5.3.0"

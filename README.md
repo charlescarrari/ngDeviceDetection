@@ -3,6 +3,7 @@ This plugin comes with the most common devices and os systems for modern mobile 
 ### Detect retina displays
 You can detect if your device has a display with a double pixel ratio (Like Apple's retina).
 
++ $.mob.retinaHD(); // returns boolean (devicePixelRation == 3)
 + $.mob.retina(); // returns boolean (devicePixelRation == 2)
 + $.mob.halfretina(); // returns boolean (devicePixelRation > 1 && < 2)
 
@@ -26,12 +27,13 @@ You can detect the following devices:
 + iPad  			: $.mob.ipad();
 + iPod 				: $.mob.ipod();
 + Nokia				: $.mob.nokia();
++ Google Nexus 		: $.mob.nexus();
 + HTC 				: $.mob.htc();
 + Samsung			: $.mob.samsung();
 + Blackberry		: $.mob.blackberry();
 + HTC				: $.mob.htc();
 + Acer				: $.mob.acer();
-+ SonyEricsson		: $.mob.sonyericsson();
++ Sony				: $.mob.sony();
 + Motorola			: $.mob.motorola();
 + LG				: $.mob.LG();
 + Lenovo			: $.mob.lenovo();
@@ -139,6 +141,7 @@ The WordPress plugin automatic instantiates the class.
 + $mobile -> operaMini(); // returns boolean
 + $mobile -> firefox(); // returns boolean
 + $mobile -> webkit(); // returns boolean
++ $mobile -> retinaHD(); // returns boolean  | true when devicePixelRation == 3
 + $mobile -> retina(); // returns boolean  | true when devicePixelRation == 2
 + $mobile -> halfretina(); // returns boolean  | true when devicePixelRation > 1 && < 2
 
