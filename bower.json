@@ -1,21 +1,18 @@
 {
-  "name": "mobile-detection",
-  "version": "2.7.0",
-  "homepage": "https://github.com/joskoomen/Mobile-Detection",
+  "name": "Anguler Device Detector",
+  "version": "3.0.0",
+  "homepage": "https://github.com/joskoomen/Device-Detector",
   "authors": ["Jos Koomen <ik@JosKoomen.nl>"],
-  "description": "Detect Browsers, Devices and Screen  DPI. Add classes to HTML tag to make style separations.",
-  "main": "mobiledetection.js",
+  "description": "Angular module to Detect Browsers, Devices and Screen DPI. Add classes to HTML tag to make style separations.",
+  "main": "angular-devicedetector.js",
   "keywords": [
-    "Mobile",
+    "Device",
+	"Mobile",
     "Javascript",
-    "jQuery",
+    "AngularJS",
+	"Angular",
+    "Detection",
     "Detect",
-    "Multi",
-    "Platform",
-    "Android",
-    "iOS",
-    "Windows",
-    "Touch"
   ],
-  "license": "GNU"
+  "license": "MTI"
 }
