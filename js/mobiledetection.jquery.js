@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.7
+ * Version 2.8
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -98,13 +98,16 @@ jQuery.extend( {
 						return (jQuery.mob.userAgent.indexOf('os 6') !== -1);
 					case '7':
 						return (jQuery.mob.userAgent.indexOf('os 7') !== -1);
-					case '7':
+					case '8':
 						return (jQuery.mob.userAgent.indexOf('os 8') !== -1);
 					default:
 						return false;
 				}
 			}
 			return a;
+		},
+		windowsphone : function() {
+			return jQuery.mob.userAgent.indexOf('windows phone os') !== -1;
 		},
 		windowsphone7 : function() {
 			return jQuery.mob.userAgent.indexOf('windows phone os 7') !== -1;
@@ -131,7 +134,7 @@ jQuery.extend( {
 			return a;
 		},
 		blackberry : function() {
-			return jQuery.mob.userAgent.indexOf('blackberry') !== -1;
+			return jQuery.mob.userAgent.indexOf('bb10') !== -1;
 		},
 		anysmartphone : function() {
 		 	return /android|webos|iphone|blackberry/i.test(jQuery.mob.userAgent);
@@ -139,6 +142,9 @@ jQuery.extend( {
 		touchdevice : function() {
     		return !!('ontouchstart' in window);
  		},
+		lowdensity : function() {
+			return window.devicePixelRatio < 1;
+		},
 		halfretina : function() {
 			return window.devicePixelRatio > 1 && window.devicePixelRatio < 2;
 		},
@@ -147,6 +153,9 @@ jQuery.extend( {
 		},
 		retinaHD : function() {
 			return window.devicePixelRatio === 3;
+		},
+		superHD : function() {
+			return window.devicePixelRatio > 3;
 		},
 		standalone : function() {
 			return ("standalone" in window.navigator) && (window.navigator.standalone === true);
@@ -279,18 +288,30 @@ jQuery.extend( {
 			jQuery.mob.addDeviceClass();
 			jQuery.mob.addBrowserClass();
 			jQuery.mob.addOSClass();
-			if(jQuery.mob.retina()) {
-				html.addClass('retina');
-			}
 			if(jQuery.mob.standalone()) {
 				html.addClass('standalone');
 			}
-			if(jQuery.mob.retina()) {
+
+			if(jQuery.mob.retinaHD()) {
+				html.addClass('xlarge-density');
+				html.addClass('retina-hd');
+			}
+			else if(jQuery.mob.superHD()) {
+				html.addClass('xxlarge-density');
+				html.addClass('super-hd');
+			}
+			else if(jQuery.mob.retina()) {
+				html.addClass('large-density');
 				html.addClass('retina');
 			}
-			if(jQuery.mob.halfretina()) {
+			else if(jQuery.mob.halfretina()) {
+				html.addClass('medium-density');
 				html.addClass('halfretina');
 			}
+			else if(jQuery.mob.lowdensity()) {
+				html.addClass('small-density');
+			}
+
 			if(jQuery.mob.anysmartphone()) {
 				html.addClass('smartphone');
 			}

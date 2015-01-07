@@ -1,3 +1,13 @@
 .project
 gulpfile.js
 node_modules/
+.name
+encodings.xml
+profiles_settings.xml
+Project_Default.xml
+misc.xml
+Mobile-Detection.iml
+modules.xml
+scope_settings.xml
+vcs.xml
+workspace.xml

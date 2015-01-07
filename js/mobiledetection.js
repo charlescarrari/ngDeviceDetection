@@ -1,7 +1,7 @@
 /*
  * Detect mobile browsers and devices
  *
- * Version 2.7
+ * Version 2.8
  *
  * Author: Jos Koomen
  * Twitter : @joskoomen
@@ -158,7 +158,11 @@ var MobileDetection = function() {
 	this.blackberry = function() {
 		return userAgent.indexOf('blackberry') !== -1;
 	};
-		
+
+	this.lowdensity = function() {
+		return window.devicePixelRatio < 1;
+	};
+
 	this.halfretina = function() {
 		return window.devicePixelRatio > 1 && window.devicePixelRatio < 2;
 	};
@@ -169,6 +173,10 @@ var MobileDetection = function() {
 
 	this.retinaHD = function() {
 		return window.devicePixelRatio === 3;
+	};
+
+	this.superHD = function() {
+		return window.devicePixelRatio > 4;
 	};
 		
 	this.standalone = function() {
@@ -312,11 +320,24 @@ var MobileDetection = function() {
 		this.addDeviceClass();
 		this.addBrowserClass();
 		this.addOSClass();
-		if(this.halfretina()) {
+		if(this.lowdensity()) {
+			addClassToHTMLTag('small-density');
+		}
+		else if(this.halfretina()) {
+			addClassToHTMLTag('medium-density');
 			addClassToHTMLTag('halfretina');
 		}
-		if(this.retina()) {
+		else if(this.retina()) {
+			addClassToHTMLTag('large-density');
 			addClassToHTMLTag('retina');
+		}
+		else if(this.retinaHD()) {
+			addClassToHTMLTag('xlarge-density');
+			addClassToHTMLTag('retina-hd');
+		}
+		else if(this.superHD()) {
+			addClassToHTMLTag('xxlarge-density');
+			addClassToHTMLTag('super-retina');
 		}
 		if(this.touchdevice()()) {
 			addClassToHTMLTag('touch');
