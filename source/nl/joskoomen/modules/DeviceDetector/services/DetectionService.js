@@ -41,7 +41,7 @@ detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
             iemobile10    : ua.indexOf('iemobile/10') !== -1,
             iemobile11    : ua.indexOf('iemobile/11') !== -1,
 
-            chrome        : ua.indexOf('chrome') !== -1,
+            chrome        : (ua.indexOf('chrome') !== -1) || (ua.indexOf('crios') !== -1),
             firefox       : ua.indexOf('firefox') !== -1,
             safari        : ua.indexOf('safari') !== -1,
             opera         : ua.indexOf('opera') !== -1,
