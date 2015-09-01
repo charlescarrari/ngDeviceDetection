@@ -174,7 +174,7 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
             {classes : 'android,android5', check : detectionService.android5},
             {classes : 'blackberry,playbook', check : detectionService.playbook},
             {classes : 'blackberry', check : detectionService.blackberry},
-            {classes : 'macosx', check : detectionService.macosx},
+            {classes : 'macosx', check : detectionService.macosx}
 
         ];
 
