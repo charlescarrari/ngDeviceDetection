@@ -37,19 +37,24 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
         ];
 
         var _operatingSystems = [
+            {classes : 'windows', check : detectionService.windows},
             {classes : 'windows,wp,wp7', check : detectionService.windowsphone7},
             {classes : 'windows,wp,wp8', check : detectionService.windowsphone8},
+            {classes : 'windows,wp,wp10', check : detectionService.windowsphone10},
             {classes : 'ios,ios5', check : detectionService.ios5},
             {classes : 'ios,ios6', check : detectionService.ios6},
             {classes : 'ios,ios7', check : detectionService.ios7},
             {classes : 'ios,ios8', check : detectionService.ios8},
+            {classes : 'ios,ios9', check : detectionService.ios9},
             {classes : 'ios', check : detectionService.ios},
             {classes : 'android,android2', check : detectionService.android2},
             {classes : 'android,android3', check : detectionService.android3},
             {classes : 'android,android4', check : detectionService.android4},
             {classes : 'android,android5', check : detectionService.android5},
             {classes : 'blackberry,playbook', check : detectionService.playbook},
-            {classes : 'blackberry', check : detectionService.blackberry}
+            {classes : 'blackberry', check : detectionService.blackberry},
+            {classes : 'macosx', check : detectionService.macosx}
+
         ];
 
         var _screenDensities = [
