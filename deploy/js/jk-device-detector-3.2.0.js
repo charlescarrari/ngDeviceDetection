@@ -34,91 +34,6 @@ detector.constant('jkIPhoneDiagonals', {
     'IPHONE_6_PLUS' : 844
 });
 
-detector.directive('detectionClasses', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var classes = service.getFunctionalClasses();
-                classes.push(service.getDeviceClass());
-                classes.push(service.getDensityClass());
-                classes.push(service.getBrowserClass());
-                classes.push(service.getOSClass());
-
-                _.each(classes, function(arr) {
-                    _.each(arr.split(','), function(c) {
-                        element.addClass(c);
-
-                    });
-                });
-            }
-        };
-    }]);
-detector.directive('browserClass', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var browserClasses = service.getBrowserClass().split(',');
-                _.each(browserClasses, function(c) {
-                    element.addClass(c);
-                });
-
-            }
-        };
-    }]);
-detector.directive('densityClass', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var densityClasses = service.getDensityClass().split(',');
-                _.each(densityClasses, function(c) {
-                    element.addClass(c);
-                });
-
-            }
-        };
-    }]);
-detector.directive('deviceClass', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var deviceClasses = service.getDeviceClass().split(',');
-                _.each(deviceClasses, function(c) {
-                    element.addClass(c);
-                });
-
-            }
-        };
-    }]);
-detector.directive('functionalClasses', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var fClasses = service.getFunctionalClasses();
-                _.each(fClasses, function(f) {
-                    _.each(f.split(','), function(c) {
-                        element.addClass(c);
-                    });
-                });
-            }
-        };
-    }]);
-detector.directive('osClass', ['jkDetectionClassesService', '_',
-    function(service, _) {
-        return {
-            restrict : 'AC',
-            link     : function(scope, element) {
-                var osClasses = service.getOSClass().split(',');
-                _.each(osClasses, function(c) {
-                    element.addClass(c);
-                });
-            }
-        };
-    }]);
 detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
     function(detectionService, _) {
 
@@ -153,15 +68,16 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
             {classes : 'ie,ie9', check : detectionService.ie9},
             {classes : 'ie,ie10', check : detectionService.ie10},
             {classes : 'ie,ie11', check : detectionService.ie11},
+            {classes : 'msedge', check : detectionService.edge},
             {classes : 'operamini', check : detectionService.operamini},
             {classes : 'opera', check : detectionService.opera}
         ];
 
         var _operatingSystems = [
             {classes : 'windows', check : detectionService.windows},
-            {classes : 'windows,wp,wp7', check : detectionService.windowsphone7},
-            {classes : 'windows,wp,wp8', check : detectionService.windowsphone8},
-            {classes : 'windows,wp,wp10', check : detectionService.windowsphone10},
+            {classes : 'windows,windowsphone,windowsphone7', check : detectionService.windowsphone7},
+            {classes : 'windows,windowsphone,windowsphone8', check : detectionService.windowsphone8},
+            {classes : 'windows,windowsphone,windowsphone10', check : detectionService.windowsphone10},
             {classes : 'ios,ios5', check : detectionService.ios5},
             {classes : 'ios,ios6', check : detectionService.ios6},
             {classes : 'ios,ios7', check : detectionService.ios7},
@@ -330,4 +246,90 @@ detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
             }
         };
 
+    }]);
+
+detector.directive('detectionClasses', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var classes = service.getFunctionalClasses();
+                classes.push(service.getDeviceClass());
+                classes.push(service.getDensityClass());
+                classes.push(service.getBrowserClass());
+                classes.push(service.getOSClass());
+
+                _.each(classes, function(arr) {
+                    _.each(arr.split(','), function(c) {
+                        element.addClass(c);
+
+                    });
+                });
+            }
+        };
+    }]);
+detector.directive('browserClass', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var browserClasses = service.getBrowserClass().split(',');
+                _.each(browserClasses, function(c) {
+                    element.addClass(c);
+                });
+
+            }
+        };
+    }]);
+detector.directive('densityClass', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var densityClasses = service.getDensityClass().split(',');
+                _.each(densityClasses, function(c) {
+                    element.addClass(c);
+                });
+
+            }
+        };
+    }]);
+detector.directive('deviceClass', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var deviceClasses = service.getDeviceClass().split(',');
+                _.each(deviceClasses, function(c) {
+                    element.addClass(c);
+                });
+
+            }
+        };
+    }]);
+detector.directive('functionalClasses', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var fClasses = service.getFunctionalClasses();
+                _.each(fClasses, function(f) {
+                    _.each(f.split(','), function(c) {
+                        element.addClass(c);
+                    });
+                });
+            }
+        };
+    }]);
+detector.directive('osClass', ['jkDetectionClassesService', '_',
+    function(service, _) {
+        return {
+            restrict : 'AC',
+            link     : function(scope, element) {
+                var osClasses = service.getOSClass().split(',');
+                _.each(osClasses, function(c) {
+                    element.addClass(c);
+                });
+            }
+        };
     }]);
