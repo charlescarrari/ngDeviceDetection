@@ -6,8 +6,12 @@ The jQuery plugin and PHP class + wordpress plugin are still available in a sepa
 
 Read more about v2.* in the [Wiki](https://github.com/joskoomen/Mobile-Detection/wiki/2.*)
 
-###3.0
-3.0 is an Angular Module only
+###NEW!! Classes
+Inspired by Foundation i've added some classes to show, hide, and set visibility for most of the directive classes. Show certain divs for iOS only and hide them for Android
+This is added since 3.2.0 and not really used in production projects this far.
+
+###3.+
+3.+ is an Angular Module only
 
 ###Services
 + `jkDetectionService`        : This is the Core Service that handles the checks.

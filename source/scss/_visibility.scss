@@ -1,0 +1,82 @@
+$visibility-keys : iphone,
+iphone3g,
+iphone4,
+iphone5,
+iphone6,
+iphone6plus,
+ipad,
+ios,
+ios5,
+ios6,
+ios7,
+ios8,
+ios9,
+android,
+android2,
+android3,
+android4,
+android5,
+chrome,
+safari,
+firefox,
+iemobile,
+iemobile9,
+iemobile10,
+iemobile11,
+ie,
+ie8,
+ie9,
+ie10,
+ie11,
+msedge,
+windowsphone,
+windowsphone7,
+windowsphone8,
+windowsphone10,
+blackberry,
+playbook,
+macosx,
+windows,
+lowdensity,
+halfretina,
+retina,
+retinahd,
+superhd,
+standalone,
+mobile,
+desktop;
+
+@mixin visibility-loop {
+    @each $current-visibility-key in $visibility-keys {
+
+        .#{$current-visibility-key} .show-for-#{$current-visibility-key}-only {
+            display : inherit !important;
+        }
+        :not(.#{$current-visibility-key}) .show-for-#{$current-visibility-key}-only {
+            display : none !important;
+        }
+
+        .#{$current-visibility-key} .hide-for-#{$current-visibility-key}-only {
+            display : none !important;
+        }
+        :not(.#{$current-visibility-key}) .hide-for-#{$current-visibility-key}-only {
+            display : inherit !important;
+        }
+
+        .#{$current-visibility-key} .visible-for-#{$current-visibility-key}-only {
+            visibility : visible !important;
+        }
+        :not(.#{$current-visibility-key}) .visible-for-#{$current-visibility-key}-only {
+            visibility : hidden !important;
+        }
+
+        .#{$current-visibility-key} .hidden-for-#{$current-visibility-key}-only {
+            visibility : hidden !important;
+        }
+        :not(.#{$current-visibility-key}) .hidden-for-#{$current-visibility-key}-only {
+            visibility : visible !important;
+        }
+    }
+}
+
+@include visibility-loop;
