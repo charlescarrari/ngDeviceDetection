@@ -1,0 +1,1127 @@
+.iphone .show-for-iphone-only {
+  display: inherit !important; }
+
+:not(.iphone) .show-for-iphone-only {
+  display: none !important; }
+
+.iphone .hide-for-iphone-only {
+  display: none !important; }
+
+:not(.iphone) .hide-for-iphone-only {
+  display: inherit !important; }
+
+.iphone .visible-for-iphone-only {
+  visibility: visible !important; }
+
+:not(.iphone) .visible-for-iphone-only {
+  visibility: hidden !important; }
+
+.iphone .hidden-for-iphone-only {
+  visibility: hidden !important; }
+
+:not(.iphone) .hidden-for-iphone-only {
+  visibility: visible !important; }
+
+.iphone3g .show-for-iphone3g-only {
+  display: inherit !important; }
+
+:not(.iphone3g) .show-for-iphone3g-only {
+  display: none !important; }
+
+.iphone3g .hide-for-iphone3g-only {
+  display: none !important; }
+
+:not(.iphone3g) .hide-for-iphone3g-only {
+  display: inherit !important; }
+
+.iphone3g .visible-for-iphone3g-only {
+  visibility: visible !important; }
+
+:not(.iphone3g) .visible-for-iphone3g-only {
+  visibility: hidden !important; }
+
+.iphone3g .hidden-for-iphone3g-only {
+  visibility: hidden !important; }
+
+:not(.iphone3g) .hidden-for-iphone3g-only {
+  visibility: visible !important; }
+
+.iphone4 .show-for-iphone4-only {
+  display: inherit !important; }
+
+:not(.iphone4) .show-for-iphone4-only {
+  display: none !important; }
+
+.iphone4 .hide-for-iphone4-only {
+  display: none !important; }
+
+:not(.iphone4) .hide-for-iphone4-only {
+  display: inherit !important; }
+
+.iphone4 .visible-for-iphone4-only {
+  visibility: visible !important; }
+
+:not(.iphone4) .visible-for-iphone4-only {
+  visibility: hidden !important; }
+
+.iphone4 .hidden-for-iphone4-only {
+  visibility: hidden !important; }
+
+:not(.iphone4) .hidden-for-iphone4-only {
+  visibility: visible !important; }
+
+.iphone5 .show-for-iphone5-only {
+  display: inherit !important; }
+
+:not(.iphone5) .show-for-iphone5-only {
+  display: none !important; }
+
+.iphone5 .hide-for-iphone5-only {
+  display: none !important; }
+
+:not(.iphone5) .hide-for-iphone5-only {
+  display: inherit !important; }
+
+.iphone5 .visible-for-iphone5-only {
+  visibility: visible !important; }
+
+:not(.iphone5) .visible-for-iphone5-only {
+  visibility: hidden !important; }
+
+.iphone5 .hidden-for-iphone5-only {
+  visibility: hidden !important; }
+
+:not(.iphone5) .hidden-for-iphone5-only {
+  visibility: visible !important; }
+
+.iphone6 .show-for-iphone6-only {
+  display: inherit !important; }
+
+:not(.iphone6) .show-for-iphone6-only {
+  display: none !important; }
+
+.iphone6 .hide-for-iphone6-only {
+  display: none !important; }
+
+:not(.iphone6) .hide-for-iphone6-only {
+  display: inherit !important; }
+
+.iphone6 .visible-for-iphone6-only {
+  visibility: visible !important; }
+
+:not(.iphone6) .visible-for-iphone6-only {
+  visibility: hidden !important; }
+
+.iphone6 .hidden-for-iphone6-only {
+  visibility: hidden !important; }
+
+:not(.iphone6) .hidden-for-iphone6-only {
+  visibility: visible !important; }
+
+.iphone6plus .show-for-iphone6plus-only {
+  display: inherit !important; }
+
+:not(.iphone6plus) .show-for-iphone6plus-only {
+  display: none !important; }
+
+.iphone6plus .hide-for-iphone6plus-only {
+  display: none !important; }
+
+:not(.iphone6plus) .hide-for-iphone6plus-only {
+  display: inherit !important; }
+
+.iphone6plus .visible-for-iphone6plus-only {
+  visibility: visible !important; }
+
+:not(.iphone6plus) .visible-for-iphone6plus-only {
+  visibility: hidden !important; }
+
+.iphone6plus .hidden-for-iphone6plus-only {
+  visibility: hidden !important; }
+
+:not(.iphone6plus) .hidden-for-iphone6plus-only {
+  visibility: visible !important; }
+
+.ipad .show-for-ipad-only {
+  display: inherit !important; }
+
+:not(.ipad) .show-for-ipad-only {
+  display: none !important; }
+
+.ipad .hide-for-ipad-only {
+  display: none !important; }
+
+:not(.ipad) .hide-for-ipad-only {
+  display: inherit !important; }
+
+.ipad .visible-for-ipad-only {
+  visibility: visible !important; }
+
+:not(.ipad) .visible-for-ipad-only {
+  visibility: hidden !important; }
+
+.ipad .hidden-for-ipad-only {
+  visibility: hidden !important; }
+
+:not(.ipad) .hidden-for-ipad-only {
+  visibility: visible !important; }
+
+.ios .show-for-ios-only {
+  display: inherit !important; }
+
+:not(.ios) .show-for-ios-only {
+  display: none !important; }
+
+.ios .hide-for-ios-only {
+  display: none !important; }
+
+:not(.ios) .hide-for-ios-only {
+  display: inherit !important; }
+
+.ios .visible-for-ios-only {
+  visibility: visible !important; }
+
+:not(.ios) .visible-for-ios-only {
+  visibility: hidden !important; }
+
+.ios .hidden-for-ios-only {
+  visibility: hidden !important; }
+
+:not(.ios) .hidden-for-ios-only {
+  visibility: visible !important; }
+
+.ios5 .show-for-ios5-only {
+  display: inherit !important; }
+
+:not(.ios5) .show-for-ios5-only {
+  display: none !important; }
+
+.ios5 .hide-for-ios5-only {
+  display: none !important; }
+
+:not(.ios5) .hide-for-ios5-only {
+  display: inherit !important; }
+
+.ios5 .visible-for-ios5-only {
+  visibility: visible !important; }
+
+:not(.ios5) .visible-for-ios5-only {
+  visibility: hidden !important; }
+
+.ios5 .hidden-for-ios5-only {
+  visibility: hidden !important; }
+
+:not(.ios5) .hidden-for-ios5-only {
+  visibility: visible !important; }
+
+.ios6 .show-for-ios6-only {
+  display: inherit !important; }
+
+:not(.ios6) .show-for-ios6-only {
+  display: none !important; }
+
+.ios6 .hide-for-ios6-only {
+  display: none !important; }
+
+:not(.ios6) .hide-for-ios6-only {
+  display: inherit !important; }
+
+.ios6 .visible-for-ios6-only {
+  visibility: visible !important; }
+
+:not(.ios6) .visible-for-ios6-only {
+  visibility: hidden !important; }
+
+.ios6 .hidden-for-ios6-only {
+  visibility: hidden !important; }
+
+:not(.ios6) .hidden-for-ios6-only {
+  visibility: visible !important; }
+
+.ios7 .show-for-ios7-only {
+  display: inherit !important; }
+
+:not(.ios7) .show-for-ios7-only {
+  display: none !important; }
+
+.ios7 .hide-for-ios7-only {
+  display: none !important; }
+
+:not(.ios7) .hide-for-ios7-only {
+  display: inherit !important; }
+
+.ios7 .visible-for-ios7-only {
+  visibility: visible !important; }
+
+:not(.ios7) .visible-for-ios7-only {
+  visibility: hidden !important; }
+
+.ios7 .hidden-for-ios7-only {
+  visibility: hidden !important; }
+
+:not(.ios7) .hidden-for-ios7-only {
+  visibility: visible !important; }
+
+.ios8 .show-for-ios8-only {
+  display: inherit !important; }
+
+:not(.ios8) .show-for-ios8-only {
+  display: none !important; }
+
+.ios8 .hide-for-ios8-only {
+  display: none !important; }
+
+:not(.ios8) .hide-for-ios8-only {
+  display: inherit !important; }
+
+.ios8 .visible-for-ios8-only {
+  visibility: visible !important; }
+
+:not(.ios8) .visible-for-ios8-only {
+  visibility: hidden !important; }
+
+.ios8 .hidden-for-ios8-only {
+  visibility: hidden !important; }
+
+:not(.ios8) .hidden-for-ios8-only {
+  visibility: visible !important; }
+
+.ios9 .show-for-ios9-only {
+  display: inherit !important; }
+
+:not(.ios9) .show-for-ios9-only {
+  display: none !important; }
+
+.ios9 .hide-for-ios9-only {
+  display: none !important; }
+
+:not(.ios9) .hide-for-ios9-only {
+  display: inherit !important; }
+
+.ios9 .visible-for-ios9-only {
+  visibility: visible !important; }
+
+:not(.ios9) .visible-for-ios9-only {
+  visibility: hidden !important; }
+
+.ios9 .hidden-for-ios9-only {
+  visibility: hidden !important; }
+
+:not(.ios9) .hidden-for-ios9-only {
+  visibility: visible !important; }
+
+.android .show-for-android-only {
+  display: inherit !important; }
+
+:not(.android) .show-for-android-only {
+  display: none !important; }
+
+.android .hide-for-android-only {
+  display: none !important; }
+
+:not(.android) .hide-for-android-only {
+  display: inherit !important; }
+
+.android .visible-for-android-only {
+  visibility: visible !important; }
+
+:not(.android) .visible-for-android-only {
+  visibility: hidden !important; }
+
+.android .hidden-for-android-only {
+  visibility: hidden !important; }
+
+:not(.android) .hidden-for-android-only {
+  visibility: visible !important; }
+
+.android2 .show-for-android2-only {
+  display: inherit !important; }
+
+:not(.android2) .show-for-android2-only {
+  display: none !important; }
+
+.android2 .hide-for-android2-only {
+  display: none !important; }
+
+:not(.android2) .hide-for-android2-only {
+  display: inherit !important; }
+
+.android2 .visible-for-android2-only {
+  visibility: visible !important; }
+
+:not(.android2) .visible-for-android2-only {
+  visibility: hidden !important; }
+
+.android2 .hidden-for-android2-only {
+  visibility: hidden !important; }
+
+:not(.android2) .hidden-for-android2-only {
+  visibility: visible !important; }
+
+.android3 .show-for-android3-only {
+  display: inherit !important; }
+
+:not(.android3) .show-for-android3-only {
+  display: none !important; }
+
+.android3 .hide-for-android3-only {
+  display: none !important; }
+
+:not(.android3) .hide-for-android3-only {
+  display: inherit !important; }
+
+.android3 .visible-for-android3-only {
+  visibility: visible !important; }
+
+:not(.android3) .visible-for-android3-only {
+  visibility: hidden !important; }
+
+.android3 .hidden-for-android3-only {
+  visibility: hidden !important; }
+
+:not(.android3) .hidden-for-android3-only {
+  visibility: visible !important; }
+
+.android4 .show-for-android4-only {
+  display: inherit !important; }
+
+:not(.android4) .show-for-android4-only {
+  display: none !important; }
+
+.android4 .hide-for-android4-only {
+  display: none !important; }
+
+:not(.android4) .hide-for-android4-only {
+  display: inherit !important; }
+
+.android4 .visible-for-android4-only {
+  visibility: visible !important; }
+
+:not(.android4) .visible-for-android4-only {
+  visibility: hidden !important; }
+
+.android4 .hidden-for-android4-only {
+  visibility: hidden !important; }
+
+:not(.android4) .hidden-for-android4-only {
+  visibility: visible !important; }
+
+.android5 .show-for-android5-only {
+  display: inherit !important; }
+
+:not(.android5) .show-for-android5-only {
+  display: none !important; }
+
+.android5 .hide-for-android5-only {
+  display: none !important; }
+
+:not(.android5) .hide-for-android5-only {
+  display: inherit !important; }
+
+.android5 .visible-for-android5-only {
+  visibility: visible !important; }
+
+:not(.android5) .visible-for-android5-only {
+  visibility: hidden !important; }
+
+.android5 .hidden-for-android5-only {
+  visibility: hidden !important; }
+
+:not(.android5) .hidden-for-android5-only {
+  visibility: visible !important; }
+
+.chrome .show-for-chrome-only {
+  display: inherit !important; }
+
+:not(.chrome) .show-for-chrome-only {
+  display: none !important; }
+
+.chrome .hide-for-chrome-only {
+  display: none !important; }
+
+:not(.chrome) .hide-for-chrome-only {
+  display: inherit !important; }
+
+.chrome .visible-for-chrome-only {
+  visibility: visible !important; }
+
+:not(.chrome) .visible-for-chrome-only {
+  visibility: hidden !important; }
+
+.chrome .hidden-for-chrome-only {
+  visibility: hidden !important; }
+
+:not(.chrome) .hidden-for-chrome-only {
+  visibility: visible !important; }
+
+.safari .show-for-safari-only {
+  display: inherit !important; }
+
+:not(.safari) .show-for-safari-only {
+  display: none !important; }
+
+.safari .hide-for-safari-only {
+  display: none !important; }
+
+:not(.safari) .hide-for-safari-only {
+  display: inherit !important; }
+
+.safari .visible-for-safari-only {
+  visibility: visible !important; }
+
+:not(.safari) .visible-for-safari-only {
+  visibility: hidden !important; }
+
+.safari .hidden-for-safari-only {
+  visibility: hidden !important; }
+
+:not(.safari) .hidden-for-safari-only {
+  visibility: visible !important; }
+
+.firefox .show-for-firefox-only {
+  display: inherit !important; }
+
+:not(.firefox) .show-for-firefox-only {
+  display: none !important; }
+
+.firefox .hide-for-firefox-only {
+  display: none !important; }
+
+:not(.firefox) .hide-for-firefox-only {
+  display: inherit !important; }
+
+.firefox .visible-for-firefox-only {
+  visibility: visible !important; }
+
+:not(.firefox) .visible-for-firefox-only {
+  visibility: hidden !important; }
+
+.firefox .hidden-for-firefox-only {
+  visibility: hidden !important; }
+
+:not(.firefox) .hidden-for-firefox-only {
+  visibility: visible !important; }
+
+.iemobile .show-for-iemobile-only {
+  display: inherit !important; }
+
+:not(.iemobile) .show-for-iemobile-only {
+  display: none !important; }
+
+.iemobile .hide-for-iemobile-only {
+  display: none !important; }
+
+:not(.iemobile) .hide-for-iemobile-only {
+  display: inherit !important; }
+
+.iemobile .visible-for-iemobile-only {
+  visibility: visible !important; }
+
+:not(.iemobile) .visible-for-iemobile-only {
+  visibility: hidden !important; }
+
+.iemobile .hidden-for-iemobile-only {
+  visibility: hidden !important; }
+
+:not(.iemobile) .hidden-for-iemobile-only {
+  visibility: visible !important; }
+
+.iemobile9 .show-for-iemobile9-only {
+  display: inherit !important; }
+
+:not(.iemobile9) .show-for-iemobile9-only {
+  display: none !important; }
+
+.iemobile9 .hide-for-iemobile9-only {
+  display: none !important; }
+
+:not(.iemobile9) .hide-for-iemobile9-only {
+  display: inherit !important; }
+
+.iemobile9 .visible-for-iemobile9-only {
+  visibility: visible !important; }
+
+:not(.iemobile9) .visible-for-iemobile9-only {
+  visibility: hidden !important; }
+
+.iemobile9 .hidden-for-iemobile9-only {
+  visibility: hidden !important; }
+
+:not(.iemobile9) .hidden-for-iemobile9-only {
+  visibility: visible !important; }
+
+.iemobile10 .show-for-iemobile10-only {
+  display: inherit !important; }
+
+:not(.iemobile10) .show-for-iemobile10-only {
+  display: none !important; }
+
+.iemobile10 .hide-for-iemobile10-only {
+  display: none !important; }
+
+:not(.iemobile10) .hide-for-iemobile10-only {
+  display: inherit !important; }
+
+.iemobile10 .visible-for-iemobile10-only {
+  visibility: visible !important; }
+
+:not(.iemobile10) .visible-for-iemobile10-only {
+  visibility: hidden !important; }
+
+.iemobile10 .hidden-for-iemobile10-only {
+  visibility: hidden !important; }
+
+:not(.iemobile10) .hidden-for-iemobile10-only {
+  visibility: visible !important; }
+
+.iemobile11 .show-for-iemobile11-only {
+  display: inherit !important; }
+
+:not(.iemobile11) .show-for-iemobile11-only {
+  display: none !important; }
+
+.iemobile11 .hide-for-iemobile11-only {
+  display: none !important; }
+
+:not(.iemobile11) .hide-for-iemobile11-only {
+  display: inherit !important; }
+
+.iemobile11 .visible-for-iemobile11-only {
+  visibility: visible !important; }
+
+:not(.iemobile11) .visible-for-iemobile11-only {
+  visibility: hidden !important; }
+
+.iemobile11 .hidden-for-iemobile11-only {
+  visibility: hidden !important; }
+
+:not(.iemobile11) .hidden-for-iemobile11-only {
+  visibility: visible !important; }
+
+.ie .show-for-ie-only {
+  display: inherit !important; }
+
+:not(.ie) .show-for-ie-only {
+  display: none !important; }
+
+.ie .hide-for-ie-only {
+  display: none !important; }
+
+:not(.ie) .hide-for-ie-only {
+  display: inherit !important; }
+
+.ie .visible-for-ie-only {
+  visibility: visible !important; }
+
+:not(.ie) .visible-for-ie-only {
+  visibility: hidden !important; }
+
+.ie .hidden-for-ie-only {
+  visibility: hidden !important; }
+
+:not(.ie) .hidden-for-ie-only {
+  visibility: visible !important; }
+
+.ie8 .show-for-ie8-only {
+  display: inherit !important; }
+
+:not(.ie8) .show-for-ie8-only {
+  display: none !important; }
+
+.ie8 .hide-for-ie8-only {
+  display: none !important; }
+
+:not(.ie8) .hide-for-ie8-only {
+  display: inherit !important; }
+
+.ie8 .visible-for-ie8-only {
+  visibility: visible !important; }
+
+:not(.ie8) .visible-for-ie8-only {
+  visibility: hidden !important; }
+
+.ie8 .hidden-for-ie8-only {
+  visibility: hidden !important; }
+
+:not(.ie8) .hidden-for-ie8-only {
+  visibility: visible !important; }
+
+.ie9 .show-for-ie9-only {
+  display: inherit !important; }
+
+:not(.ie9) .show-for-ie9-only {
+  display: none !important; }
+
+.ie9 .hide-for-ie9-only {
+  display: none !important; }
+
+:not(.ie9) .hide-for-ie9-only {
+  display: inherit !important; }
+
+.ie9 .visible-for-ie9-only {
+  visibility: visible !important; }
+
+:not(.ie9) .visible-for-ie9-only {
+  visibility: hidden !important; }
+
+.ie9 .hidden-for-ie9-only {
+  visibility: hidden !important; }
+
+:not(.ie9) .hidden-for-ie9-only {
+  visibility: visible !important; }
+
+.ie10 .show-for-ie10-only {
+  display: inherit !important; }
+
+:not(.ie10) .show-for-ie10-only {
+  display: none !important; }
+
+.ie10 .hide-for-ie10-only {
+  display: none !important; }
+
+:not(.ie10) .hide-for-ie10-only {
+  display: inherit !important; }
+
+.ie10 .visible-for-ie10-only {
+  visibility: visible !important; }
+
+:not(.ie10) .visible-for-ie10-only {
+  visibility: hidden !important; }
+
+.ie10 .hidden-for-ie10-only {
+  visibility: hidden !important; }
+
+:not(.ie10) .hidden-for-ie10-only {
+  visibility: visible !important; }
+
+.ie11 .show-for-ie11-only {
+  display: inherit !important; }
+
+:not(.ie11) .show-for-ie11-only {
+  display: none !important; }
+
+.ie11 .hide-for-ie11-only {
+  display: none !important; }
+
+:not(.ie11) .hide-for-ie11-only {
+  display: inherit !important; }
+
+.ie11 .visible-for-ie11-only {
+  visibility: visible !important; }
+
+:not(.ie11) .visible-for-ie11-only {
+  visibility: hidden !important; }
+
+.ie11 .hidden-for-ie11-only {
+  visibility: hidden !important; }
+
+:not(.ie11) .hidden-for-ie11-only {
+  visibility: visible !important; }
+
+.msedge .show-for-msedge-only {
+  display: inherit !important; }
+
+:not(.msedge) .show-for-msedge-only {
+  display: none !important; }
+
+.msedge .hide-for-msedge-only {
+  display: none !important; }
+
+:not(.msedge) .hide-for-msedge-only {
+  display: inherit !important; }
+
+.msedge .visible-for-msedge-only {
+  visibility: visible !important; }
+
+:not(.msedge) .visible-for-msedge-only {
+  visibility: hidden !important; }
+
+.msedge .hidden-for-msedge-only {
+  visibility: hidden !important; }
+
+:not(.msedge) .hidden-for-msedge-only {
+  visibility: visible !important; }
+
+.windowsphone .show-for-windowsphone-only {
+  display: inherit !important; }
+
+:not(.windowsphone) .show-for-windowsphone-only {
+  display: none !important; }
+
+.windowsphone .hide-for-windowsphone-only {
+  display: none !important; }
+
+:not(.windowsphone) .hide-for-windowsphone-only {
+  display: inherit !important; }
+
+.windowsphone .visible-for-windowsphone-only {
+  visibility: visible !important; }
+
+:not(.windowsphone) .visible-for-windowsphone-only {
+  visibility: hidden !important; }
+
+.windowsphone .hidden-for-windowsphone-only {
+  visibility: hidden !important; }
+
+:not(.windowsphone) .hidden-for-windowsphone-only {
+  visibility: visible !important; }
+
+.windowsphone7 .show-for-windowsphone7-only {
+  display: inherit !important; }
+
+:not(.windowsphone7) .show-for-windowsphone7-only {
+  display: none !important; }
+
+.windowsphone7 .hide-for-windowsphone7-only {
+  display: none !important; }
+
+:not(.windowsphone7) .hide-for-windowsphone7-only {
+  display: inherit !important; }
+
+.windowsphone7 .visible-for-windowsphone7-only {
+  visibility: visible !important; }
+
+:not(.windowsphone7) .visible-for-windowsphone7-only {
+  visibility: hidden !important; }
+
+.windowsphone7 .hidden-for-windowsphone7-only {
+  visibility: hidden !important; }
+
+:not(.windowsphone7) .hidden-for-windowsphone7-only {
+  visibility: visible !important; }
+
+.windowsphone8 .show-for-windowsphone8-only {
+  display: inherit !important; }
+
+:not(.windowsphone8) .show-for-windowsphone8-only {
+  display: none !important; }
+
+.windowsphone8 .hide-for-windowsphone8-only {
+  display: none !important; }
+
+:not(.windowsphone8) .hide-for-windowsphone8-only {
+  display: inherit !important; }
+
+.windowsphone8 .visible-for-windowsphone8-only {
+  visibility: visible !important; }
+
+:not(.windowsphone8) .visible-for-windowsphone8-only {
+  visibility: hidden !important; }
+
+.windowsphone8 .hidden-for-windowsphone8-only {
+  visibility: hidden !important; }
+
+:not(.windowsphone8) .hidden-for-windowsphone8-only {
+  visibility: visible !important; }
+
+.windowsphone10 .show-for-windowsphone10-only {
+  display: inherit !important; }
+
+:not(.windowsphone10) .show-for-windowsphone10-only {
+  display: none !important; }
+
+.windowsphone10 .hide-for-windowsphone10-only {
+  display: none !important; }
+
+:not(.windowsphone10) .hide-for-windowsphone10-only {
+  display: inherit !important; }
+
+.windowsphone10 .visible-for-windowsphone10-only {
+  visibility: visible !important; }
+
+:not(.windowsphone10) .visible-for-windowsphone10-only {
+  visibility: hidden !important; }
+
+.windowsphone10 .hidden-for-windowsphone10-only {
+  visibility: hidden !important; }
+
+:not(.windowsphone10) .hidden-for-windowsphone10-only {
+  visibility: visible !important; }
+
+.blackberry .show-for-blackberry-only {
+  display: inherit !important; }
+
+:not(.blackberry) .show-for-blackberry-only {
+  display: none !important; }
+
+.blackberry .hide-for-blackberry-only {
+  display: none !important; }
+
+:not(.blackberry) .hide-for-blackberry-only {
+  display: inherit !important; }
+
+.blackberry .visible-for-blackberry-only {
+  visibility: visible !important; }
+
+:not(.blackberry) .visible-for-blackberry-only {
+  visibility: hidden !important; }
+
+.blackberry .hidden-for-blackberry-only {
+  visibility: hidden !important; }
+
+:not(.blackberry) .hidden-for-blackberry-only {
+  visibility: visible !important; }
+
+.playbook .show-for-playbook-only {
+  display: inherit !important; }
+
+:not(.playbook) .show-for-playbook-only {
+  display: none !important; }
+
+.playbook .hide-for-playbook-only {
+  display: none !important; }
+
+:not(.playbook) .hide-for-playbook-only {
+  display: inherit !important; }
+
+.playbook .visible-for-playbook-only {
+  visibility: visible !important; }
+
+:not(.playbook) .visible-for-playbook-only {
+  visibility: hidden !important; }
+
+.playbook .hidden-for-playbook-only {
+  visibility: hidden !important; }
+
+:not(.playbook) .hidden-for-playbook-only {
+  visibility: visible !important; }
+
+.macosx .show-for-macosx-only {
+  display: inherit !important; }
+
+:not(.macosx) .show-for-macosx-only {
+  display: none !important; }
+
+.macosx .hide-for-macosx-only {
+  display: none !important; }
+
+:not(.macosx) .hide-for-macosx-only {
+  display: inherit !important; }
+
+.macosx .visible-for-macosx-only {
+  visibility: visible !important; }
+
+:not(.macosx) .visible-for-macosx-only {
+  visibility: hidden !important; }
+
+.macosx .hidden-for-macosx-only {
+  visibility: hidden !important; }
+
+:not(.macosx) .hidden-for-macosx-only {
+  visibility: visible !important; }
+
+.windows .show-for-windows-only {
+  display: inherit !important; }
+
+:not(.windows) .show-for-windows-only {
+  display: none !important; }
+
+.windows .hide-for-windows-only {
+  display: none !important; }
+
+:not(.windows) .hide-for-windows-only {
+  display: inherit !important; }
+
+.windows .visible-for-windows-only {
+  visibility: visible !important; }
+
+:not(.windows) .visible-for-windows-only {
+  visibility: hidden !important; }
+
+.windows .hidden-for-windows-only {
+  visibility: hidden !important; }
+
+:not(.windows) .hidden-for-windows-only {
+  visibility: visible !important; }
+
+.lowdensity .show-for-lowdensity-only {
+  display: inherit !important; }
+
+:not(.lowdensity) .show-for-lowdensity-only {
+  display: none !important; }
+
+.lowdensity .hide-for-lowdensity-only {
+  display: none !important; }
+
+:not(.lowdensity) .hide-for-lowdensity-only {
+  display: inherit !important; }
+
+.lowdensity .visible-for-lowdensity-only {
+  visibility: visible !important; }
+
+:not(.lowdensity) .visible-for-lowdensity-only {
+  visibility: hidden !important; }
+
+.lowdensity .hidden-for-lowdensity-only {
+  visibility: hidden !important; }
+
+:not(.lowdensity) .hidden-for-lowdensity-only {
+  visibility: visible !important; }
+
+.halfretina .show-for-halfretina-only {
+  display: inherit !important; }
+
+:not(.halfretina) .show-for-halfretina-only {
+  display: none !important; }
+
+.halfretina .hide-for-halfretina-only {
+  display: none !important; }
+
+:not(.halfretina) .hide-for-halfretina-only {
+  display: inherit !important; }
+
+.halfretina .visible-for-halfretina-only {
+  visibility: visible !important; }
+
+:not(.halfretina) .visible-for-halfretina-only {
+  visibility: hidden !important; }
+
+.halfretina .hidden-for-halfretina-only {
+  visibility: hidden !important; }
+
+:not(.halfretina) .hidden-for-halfretina-only {
+  visibility: visible !important; }
+
+.retina .show-for-retina-only {
+  display: inherit !important; }
+
+:not(.retina) .show-for-retina-only {
+  display: none !important; }
+
+.retina .hide-for-retina-only {
+  display: none !important; }
+
+:not(.retina) .hide-for-retina-only {
+  display: inherit !important; }
+
+.retina .visible-for-retina-only {
+  visibility: visible !important; }
+
+:not(.retina) .visible-for-retina-only {
+  visibility: hidden !important; }
+
+.retina .hidden-for-retina-only {
+  visibility: hidden !important; }
+
+:not(.retina) .hidden-for-retina-only {
+  visibility: visible !important; }
+
+.retinahd .show-for-retinahd-only {
+  display: inherit !important; }
+
+:not(.retinahd) .show-for-retinahd-only {
+  display: none !important; }
+
+.retinahd .hide-for-retinahd-only {
+  display: none !important; }
+
+:not(.retinahd) .hide-for-retinahd-only {
+  display: inherit !important; }
+
+.retinahd .visible-for-retinahd-only {
+  visibility: visible !important; }
+
+:not(.retinahd) .visible-for-retinahd-only {
+  visibility: hidden !important; }
+
+.retinahd .hidden-for-retinahd-only {
+  visibility: hidden !important; }
+
+:not(.retinahd) .hidden-for-retinahd-only {
+  visibility: visible !important; }
+
+.superhd .show-for-superhd-only {
+  display: inherit !important; }
+
+:not(.superhd) .show-for-superhd-only {
+  display: none !important; }
+
+.superhd .hide-for-superhd-only {
+  display: none !important; }
+
+:not(.superhd) .hide-for-superhd-only {
+  display: inherit !important; }
+
+.superhd .visible-for-superhd-only {
+  visibility: visible !important; }
+
+:not(.superhd) .visible-for-superhd-only {
+  visibility: hidden !important; }
+
+.superhd .hidden-for-superhd-only {
+  visibility: hidden !important; }
+
+:not(.superhd) .hidden-for-superhd-only {
+  visibility: visible !important; }
+
+.standalone .show-for-standalone-only {
+  display: inherit !important; }
+
+:not(.standalone) .show-for-standalone-only {
+  display: none !important; }
+
+.standalone .hide-for-standalone-only {
+  display: none !important; }
+
+:not(.standalone) .hide-for-standalone-only {
+  display: inherit !important; }
+
+.standalone .visible-for-standalone-only {
+  visibility: visible !important; }
+
+:not(.standalone) .visible-for-standalone-only {
+  visibility: hidden !important; }
+
+.standalone .hidden-for-standalone-only {
+  visibility: hidden !important; }
+
+:not(.standalone) .hidden-for-standalone-only {
+  visibility: visible !important; }
+
+.mobile .show-for-mobile-only {
+  display: inherit !important; }
+
+:not(.mobile) .show-for-mobile-only {
+  display: none !important; }
+
+.mobile .hide-for-mobile-only {
+  display: none !important; }
+
+:not(.mobile) .hide-for-mobile-only {
+  display: inherit !important; }
+
+.mobile .visible-for-mobile-only {
+  visibility: visible !important; }
+
+:not(.mobile) .visible-for-mobile-only {
+  visibility: hidden !important; }
+
+.mobile .hidden-for-mobile-only {
+  visibility: hidden !important; }
+
+:not(.mobile) .hidden-for-mobile-only {
+  visibility: visible !important; }
+
+.desktop .show-for-desktop-only {
+  display: inherit !important; }
+
+:not(.desktop) .show-for-desktop-only {
+  display: none !important; }
+
+.desktop .hide-for-desktop-only {
+  display: none !important; }
+
+:not(.desktop) .hide-for-desktop-only {
+  display: inherit !important; }
+
+.desktop .visible-for-desktop-only {
+  visibility: visible !important; }
+
+:not(.desktop) .visible-for-desktop-only {
+  visibility: hidden !important; }
+
+.desktop .hidden-for-desktop-only {
+  visibility: hidden !important; }
+
+:not(.desktop) .hidden-for-desktop-only {
+  visibility: visible !important; }

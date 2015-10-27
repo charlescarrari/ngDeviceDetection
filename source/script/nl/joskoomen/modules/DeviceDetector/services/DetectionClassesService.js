@@ -32,15 +32,16 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
             {classes : 'ie,ie9', check : detectionService.ie9},
             {classes : 'ie,ie10', check : detectionService.ie10},
             {classes : 'ie,ie11', check : detectionService.ie11},
+            {classes : 'msedge', check : detectionService.edge},
             {classes : 'operamini', check : detectionService.operamini},
             {classes : 'opera', check : detectionService.opera}
         ];
 
         var _operatingSystems = [
             {classes : 'windows', check : detectionService.windows},
-            {classes : 'windows,wp,wp7', check : detectionService.windowsphone7},
-            {classes : 'windows,wp,wp8', check : detectionService.windowsphone8},
-            {classes : 'windows,wp,wp10', check : detectionService.windowsphone10},
+            {classes : 'windows,windowsphone,windowsphone7', check : detectionService.windowsphone7},
+            {classes : 'windows,windowsphone,windowsphone8', check : detectionService.windowsphone8},
+            {classes : 'windows,windowsphone,windowsphone10', check : detectionService.windowsphone10},
             {classes : 'ios,ios5', check : detectionService.ios5},
             {classes : 'ios,ios6', check : detectionService.ios6},
             {classes : 'ios,ios7', check : detectionService.ios7},
