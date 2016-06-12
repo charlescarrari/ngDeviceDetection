@@ -11,3 +11,7 @@ scope_settings.xml
 vcs.xml
 workspace.xml
 scss
+babel-error.js
+.eslinrc
+.babelrc
+package.json
