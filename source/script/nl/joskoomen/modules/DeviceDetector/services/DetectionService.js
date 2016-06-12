@@ -1,4 +1,4 @@
-detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
+detector.factory('DetectionService', ['IPhoneDiagonals',
     function(iPhoneDiagonals) {
 
         var ua = navigator.userAgent.toLowerCase();
@@ -12,7 +12,6 @@ detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
 
         return {
             iphone         : isiPhone,
-            iphone3g       : isiPhone && (window.devicePixelRatio === 1) && (size === iPhoneDiagonals.IPHONE_4 ),
             iphone4        : isiPhone && (window.devicePixelRatio === 2) && (size === iPhoneDiagonals.IPHONE_4 ),
             iphone5        : isiPhone && (size === iPhoneDiagonals.IPHONE_5 ),
             iphone6        : isiPhone && (size === iPhoneDiagonals.IPHONE_6 ),
@@ -49,20 +48,15 @@ detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
             webkit         : ua.indexOf('webkit') !== -1,
 
             ios            : isiOS,
-            ios5           : isiOS && (ua.indexOf('os 5') !== -1),
-            ios6           : isiOS && (ua.indexOf('os 6') !== -1),
             ios7           : isiOS && (ua.indexOf('os 7') !== -1),
             ios8           : isiOS && (ua.indexOf('os 8') !== -1),
             ios9           : isiOS && (ua.indexOf('os 9') !== -1),
 
             android        : ua.indexOf('android') !== -1,
-            android2       : ua.indexOf('android 2') !== -1,
-            android3       : ua.indexOf('android 3') !== -1,
             android4       : ua.indexOf('android 4') !== -1,
             android5       : ua.indexOf('android 5') !== -1,
 
             windowsphone   : ua.indexOf('windows phone') !== -1,
-            windowsphone7  : ua.indexOf('windows phone os 7') !== -1,
             windowsphone8  : ua.indexOf('windows phone 8') !== -1,
             windowsphone10 : ua.indexOf('windows phone 10') !== -1,
 
@@ -88,7 +82,7 @@ detector.factory('jkDetectionService', ['jkIPhoneDiagonals',
             desktop        : (typeof window.orientation === 'undefined'),
 
             toString       : function() {
-                return 'jkDetectionService';
+                return 'DetectionService';
             }
         };
 

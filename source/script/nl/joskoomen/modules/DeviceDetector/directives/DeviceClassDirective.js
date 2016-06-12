@@ -1,4 +1,4 @@
-detector.directive('deviceClass', ['jkDetectionClassesService', '_',
+detector.directive('deviceClass', ['DetectionClassesService', '_',
     function(service, _) {
         return {
             restrict : 'AC',

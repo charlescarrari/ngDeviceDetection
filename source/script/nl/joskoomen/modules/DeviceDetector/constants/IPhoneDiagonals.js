@@ -1,4 +1,4 @@
-detector.constant('jkIPhoneDiagonals', {
+detector.constant('IPhoneDiagonals', {
     'IPHONE_4'      : 576,
     'IPHONE_5'      : 651,
     'IPHONE_6'      : 765,

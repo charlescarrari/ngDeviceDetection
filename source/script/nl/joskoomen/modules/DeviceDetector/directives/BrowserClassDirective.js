@@ -1,4 +1,4 @@
-detector.directive('browserClass', ['jkDetectionClassesService', '_',
+detector.directive('browserClass', ['DetectionClassesService', '_',
     function(service, _) {
         return {
             restrict : 'AC',

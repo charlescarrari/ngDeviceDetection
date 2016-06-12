@@ -22,4 +22,4 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
-var detector = angular.module('jkDeviceDetector', ['underscore']);
+var detector = angular.module('ngDeviceDetection', ['underscore']);

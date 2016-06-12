@@ -1,8 +1,7 @@
-detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
+detector.factory('DetectionClassesService', ['DetectionService', '_',
     function(detectionService, _) {
 
         var _devices = [
-            {classes : 'iphone,iphone3g', check : detectionService.iphone3g},
             {classes : 'iphone,iphone4', check : detectionService.iphone4},
             {classes : 'iphone,iphone5', check : detectionService.iphone5},
             {classes : 'iphone,iphone6', check : detectionService.iphone6},
@@ -39,17 +38,12 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
 
         var _operatingSystems = [
             {classes : 'windows', check : detectionService.windows},
-            {classes : 'windows,windowsphone,windowsphone7', check : detectionService.windowsphone7},
             {classes : 'windows,windowsphone,windowsphone8', check : detectionService.windowsphone8},
             {classes : 'windows,windowsphone,windowsphone10', check : detectionService.windowsphone10},
-            {classes : 'ios,ios5', check : detectionService.ios5},
-            {classes : 'ios,ios6', check : detectionService.ios6},
             {classes : 'ios,ios7', check : detectionService.ios7},
             {classes : 'ios,ios8', check : detectionService.ios8},
             {classes : 'ios,ios9', check : detectionService.ios9},
             {classes : 'ios', check : detectionService.ios},
-            {classes : 'android,android2', check : detectionService.android2},
-            {classes : 'android,android3', check : detectionService.android3},
             {classes : 'android,android4', check : detectionService.android4},
             {classes : 'android,android5', check : detectionService.android5},
             {classes : 'blackberry,playbook', check : detectionService.playbook},
@@ -109,7 +103,7 @@ detector.factory('jkDetectionClassesService', ['jkDetectionService', '_',
             },
 
             toString : function() {
-                return 'jkDetectionClassesService';
+                return 'DetectionClassesService';
             }
 
         };
