@@ -110,7 +110,7 @@ detector.factory('DetectionClassesService', ['DetectionService', '_', function (
 
     var _browsers = [{ classes: 'webkit,chrome', check: detectionService.chrome }, { classes: 'webkit,safari', check: detectionService.safari }, { classes: 'mozilla,ff', check: detectionService.firefox }, { classes: 'iemobile,iemobile9', check: detectionService.iemobile9 }, { classes: 'iemobile,iemobile10', check: detectionService.iemobile10 }, { classes: 'iemobile,iemobile11', check: detectionService.iemobile11 }, { classes: 'ie,ie8', check: detectionService.ie8 }, { classes: 'ie,ie9', check: detectionService.ie9 }, { classes: 'ie,ie10', check: detectionService.ie10 }, { classes: 'ie,ie11', check: detectionService.ie11 }, { classes: 'msedge', check: detectionService.edge }, { classes: 'operamini', check: detectionService.operamini }, { classes: 'opera', check: detectionService.opera }];
 
-    var _operatingSystems = [{ classes: 'windows', check: detectionService.windows }, { classes: 'windows,windowsphone,windowsphone8', check: detectionService.windowsphone8 }, { classes: 'windows,windowsphone,windowsphone10', check: detectionService.windowsphone10 }, { classes: 'ios,ios7', check: detectionService.ios7 }, { classes: 'ios,ios8', check: detectionService.ios8 }, { classes: 'ios,ios9', check: detectionService.ios9 }, { classes: 'ios', check: detectionService.ios }, { classes: 'android,android4', check: detectionService.android4 }, { classes: 'android,android5', check: detectionService.android5 }, { classes: 'blackberry,playbook', check: detectionService.playbook }, { classes: 'blackberry', check: detectionService.blackberry }, { classes: 'macosx', check: detectionService.macosx }];
+    var _operatingSystems = [{ classes: 'windows', check: detectionService.windows }, { classes: 'windows,windowsphone,windowsphone8', check: detectionService.windowsphone8 }, { classes: 'windows,windowsphone,windowsphone10', check: detectionService.windowsphone10 }, { classes: 'ios,ios7', check: detectionService.ios7 }, { classes: 'ios,ios8', check: detectionService.ios8 }, { classes: 'ios,ios9', check: detectionService.ios9 }, { classes: 'ios,ios10', check: detectionService.ios10 }, { classes: 'ios', check: detectionService.ios }, { classes: 'android,android4', check: detectionService.android4 }, { classes: 'android,android5', check: detectionService.android5 }, { classes: 'android,android6', check: detectionService.android6 }, { classes: 'blackberry,playbook', check: detectionService.playbook }, { classes: 'blackberry', check: detectionService.blackberry }, { classes: 'macosx', check: detectionService.macosx }];
 
     var _screenDensities = [{ classes: 'low-density', check: detectionService.lowdensity }, { classes: 'medium-density,half-retina', check: detectionService.halfretina }, { classes: 'large-density,retina', check: detectionService.retina }, { classes: 'xlarge-density,retina-hd', check: detectionService.retinahd }, { classes: 'xxlarge-density,super-hd', check: detectionService.superhd }];
 
@@ -192,7 +192,7 @@ detector.factory('DetectionService', ['IPhoneDiagonals', function (iPhoneDiagona
         ie9: ua.indexOf('msie 9') !== -1,
         ie10: ua.indexOf('msie 10') !== -1,
         ie11: ua.indexOf('rv:11') !== -1,
-        edge: ua.indexOf('edge/12') !== -1,
+        edge: ua.indexOf(' edge/') !== -1,
         iemobile: ua.indexOf('iemobile') !== -1,
         iemobile9: ua.indexOf('iemobile/9') !== -1,
         iemobile10: ua.indexOf('iemobile/10') !== -1,
@@ -209,10 +209,12 @@ detector.factory('DetectionService', ['IPhoneDiagonals', function (iPhoneDiagona
         ios7: isiOS && ua.indexOf('os 7') !== -1,
         ios8: isiOS && ua.indexOf('os 8') !== -1,
         ios9: isiOS && ua.indexOf('os 9') !== -1,
+        ios10: isiOS && ua.indexOf('os 10') !== -1,
 
         android: ua.indexOf('android') !== -1,
         android4: ua.indexOf('android 4') !== -1,
         android5: ua.indexOf('android 5') !== -1,
+        android6: ua.indexOf('android 6') !== -1,
 
         windowsphone: ua.indexOf('windows phone') !== -1,
         windowsphone8: ua.indexOf('windows phone 8') !== -1,

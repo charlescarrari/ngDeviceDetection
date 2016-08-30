@@ -1,10 +1,10 @@
 {
   "name": "ngDeviceDetection",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "homepage": "https://github.com/joskoomen/ngDeviceDetection",
   "authors": ["Jos Koomen <hello@JosKoo.men>"],
   "description": "Angular module to detect the Users Device, OS, Browser or Screen DPI. Option to use a directive for adding classes to the tag (prefered to HTML tag) to make style separations based on the device.",
-  "main": "ngDeviceDetection.3.5.0.js",
+  "main": "ngDeviceDetection.3.6.0.js",
   "keywords": [
     "Device",
     "Mobile",
